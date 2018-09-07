@@ -98,5 +98,97 @@ print(integers.contains(77)) // false
 
 ```
 
+### Dictionary
+
+* 키와 값으로 이루어진 컬렉션 타입
+
+```swift
+
+// Dictionary 선언과 생성
+var anyDictionary : Dictionary<String : Any = [String, Any]()
+
+// Dictionary 도 선언시에 더 다양하고 간편하게 생성할 수 있다.
+// ex) var anyDictionary = [String: Any]()
+
+
+// Dictionary 값 할당
+anyDictionary["someKey"] = "값"
+
+// Dictionary 값 변경
+anyDictionary["someKey"] = "value"
+
+// Dictionary 키 값 제거 
+anyDictionary.removeValue(forKey: "someKey")
+anyDictionary["someKey"] = nil
+
+// 불변 Dictionary 만들기
+let emptyDictionary : [String: String] = [:]
+
+```
+
+### Set 
+
+* 멤버가 중독되지 않고 순서없이 존재하는 컬렉션
+
+```swift
+
+//Set 생성 및 선언 
+var integerSet: Set<Int> = Set<Int()
+
+//Set 추가 insert
+integerSet.insert(1)
+integerSet.insert(11)
+integerSet.insert(11) // 동일한 값은 두번 insert 해도 한번만 저장된다. 
+
+
+//Set 포함여부 확인 contains
+print(integerSet.contains(1))//true
+print(integerSet.contains(2))//false
+
+//Set 멤버 삭제 
+integerSet.remove(11)
+integerSet.removeFirst() // 먼저 추가된 멤버 삭제 
+
+//Set 멤버 개수 확인 
+
+integerSet.count
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

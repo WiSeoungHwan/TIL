@@ -7,10 +7,10 @@
     * Swift 인강 문법 정리 
     * git 명령어 정리
 
-* __하루에 한 쪽씩 영어 문서 번역해보기__
+* __하루에 30분씩 영어 문서 번역해보기__
     * [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
     * [ios Programming Guide](https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html)
-* __Blog 포스팅__ 
+* __Blog 포스팅__ (blog는 아직 없으니 git에 정리하기)
 
 
 
