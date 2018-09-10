@@ -311,11 +311,102 @@ runAnother(functionName: greeting(friend:me:))// 함수를 넣어준것
 
 ```
 
+---
+
+## 조건문 
 
 
+### if-else문 
+
+*  if 문 뒤에 조건을 감싸는 소괄호는 생략가능
+* 조건값에는 Bool타입의 값만 들어올 수 있다.
+
+```swift
+
+if 조건{
+
+}else if 조건{
+
+}else{
+
+}
+```
 
 
+### switch 문
 
+* switch 의 비교값에 대부분의 스위프트 기본타입을 지원한다.
+* 각각 case 내부에는 실행가능한 코드가 반드시 있어야한다. 
+* enum의 case 같이 값이 매우 한정적인 비교값이 아닌 한  defult 구문은 반드시 작성해야 한다. 
+* 명시적으로 break를 해주지 않아도 자동적으로 break 된다.
+* fallthrough 키워드를 사용하여 break를 무시 할수 있다.( case 를 이어서 사용하고 싶을때 많이 사용한다.)
+* 또 다른 방법은 ,를 사용하여 하나의 case에 여러 패턴을 명시할 수 있습니다.
+
+```swift
+
+switch 비교값{
+    case 패턴:
+    
+    default:
+    
+}
+```
+
+
+---
+
+## 반복문
+
+* for-in
+* while
+* repeat-while
+
+
+### for-in 문
+
+```swift
+
+for item in items{// items 안의 수만큼 반복한다.
+ //실행 구문 
+}
+
+
+var integers = [1,2,3]
+let people = ["jenny": 10, "risa": 15, "mike": 12]
+
+for integer in integers{// in 안에 있는 수많큼
+print(integer)
+}
+
+for(name, age) in people{ // people 안의 수만큼
+print("\(name): \(age)")// 키와 딕셔너리 값을 출력 한다.
+}
+
+```
+
+### while 문 
+ 
+ ```swift
+ 
+ while integers.count > 1{ // 조건을 만족할때 까지 반복 한다. 
+ integers.removeLast()
+ }
+ 
+ ```
+
+### repeat-while 문 
+
+* C#의 do-while문과 유사하다.
+
+```swift
+
+repeat{//repeat 구문이 먼저 한번 동작한뒤에 while문의 조건에 따라 작동된다. 
+integers.removeLast()
+}while integers.count > 0
+
+print(integers)
+
+```
 
 
 
