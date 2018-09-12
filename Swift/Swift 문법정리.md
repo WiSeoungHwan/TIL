@@ -333,6 +333,24 @@ if 조건{
 ```
 
 
+### guard 문 
+
+* guard 문은 if else 문과 동일하게 쓸 수있지만 사용하는 상황이 조금씩 다르다.
+* guard 문의 역할은 빠른 탈출을 위해 쓰인다. 
+* guard 문에서는 else if를  쓸 수 없다. 
+* guard 문의 else에는 탈출구문이 있어야 한다.
+
+```
+func someFunc() {// 조건을 판별해서 조건이 아닐시에 빠르게 탈출하는 역할!
+guard true else { return } // 탈출 구문이 들어가 있어야한다.
+// if문에 해당하는 내용
+
+}
+
+
+```
+
+
 ### switch 문
 
 * switch 의 비교값에 대부분의 스위프트 기본타입을 지원한다.
@@ -341,6 +359,7 @@ if 조건{
 * 명시적으로 break를 해주지 않아도 자동적으로 break 된다.
 * fallthrough 키워드를 사용하여 break를 무시 할수 있다.( case 를 이어서 사용하고 싶을때 많이 사용한다.)
 * 또 다른 방법은 ,를 사용하여 하나의 case에 여러 패턴을 명시할 수 있습니다.
+* where 문으로 case에 조건을 줄 수 있다. 
 
 ```swift
 
@@ -350,6 +369,23 @@ switch 비교값{
     default:
     
 }
+
+//where의 활용 
+
+var sum = 1
+
+switch sum{
+case _ where sum > 3:
+print("크다")
+case _ where sum < 3:
+print("작다")
+default:
+break
+
+}
+
+
+
 ```
 
 
