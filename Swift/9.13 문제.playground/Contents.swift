@@ -98,12 +98,12 @@ f.toCelcius()
 //자연수를 입력받아 원래 숫자를 반대 순서로 뒤집은 숫자를 반환하는 함수
 //ex) 123 -> 321 , 10293 -> 39201
 
-func changeNum(_ num : UInt) -> UInt{
+func changeNum(_ num : UInt) -> UInt? {
     let tsStr = String(num)
     let arySty = tsStr.reversed()
     let finalStr = String(arySty)
     
-    return UInt(finalStr)!
+    return UInt(finalStr)
 }
 changeNum(923)
 
