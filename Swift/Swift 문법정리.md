@@ -539,11 +539,134 @@ optionalValue = nil
 
 ---
 
+## 옵셔널 추출 
+
+* 옵셔널의 추출 방식에는 크게 두가지가 있다. 
+    * 안전하게 값을 꺼내 오는 방식 (옵셔널 바인딩)
+    * 안에 값이 들었든 안들었든 강제적으로 추출하는 방식 ( ! )
+    
+
+### 옵셔널 바인딩
+
+* if - let 방식 사용하기 
+
+1. 옵셔널 바인딩은 옵셔널로 선언된 변수 안에 값이 들었는지 안들었는지 우선 체크를 한다. 
+2. 체크를 하고 값이 있다면 let 으로 선언이된 임시 변수에 값을 담아 if문의 중괄호 내에서 안전하게 처리한다.
+3. 만약 값이 없고 nil 값이라면 else 구문이 있는 경우에 else 구문에 해당하는 명령을 수행하게 된다. 
+4. else 구문이 없다면 수행하지 않는다. 
+
+```swift
+
+// 옵셔널 타입의 변수 선언 
+var name: String? = nil
+var age: Int? = 24
+
+if let name: String = name {
+print(name)
+}else{
+print("nil 입니다.") // 값이 nil이기 때문에 else 구문의 명령 실행 
+}
+// 변수에 값 할당 
+name = "SeongHwan"
+
+type(of: name)// Optional<String>.Type
+
+if let name: String = name {
+print(name)// 값이 있기 때문에 임시 선언한 변수에 값을 담아와 사용한다. 
+}
+print(name) // "Optional("SeongHwan")\n"
+
+// 한번에 여러 옵셔널 바인딩 하기 
+
+//,를 이용해 여러 옵셔널을 바인딩 할 수 있다. 
+
+if let name = name , let age = age {
+print("Hi, my name is \(name). my age is \(age)")
+}
+
+
+```
+
+### 강제추출 ( ! )
+
+*  `!` 키워드로 옵셔널에 들어있는 값을 강제로 추출하는 방식 
+* 만약 값이 없을경우 런타임 오류(crash) 가 발생해서 앱이 동작 도중 꺼져버린다. 
+
+```swift
+
+var name: String! = nil
+
+print(name!) // error
+
+```
+
+
+
+---
+
+
+## 구조체 ( struct ) 
+
+* struct 키워드로 정의 가능 하다.
+* class 와 유사하지만 struct 는 value  타입을 가진다. 
+
+
+### 구조체 사용하기 
+```swift
+
+struct Test {
+
+// 변수 선언
+var something = 0
+let name = "Seong Hwan"
+
+// 인스턴스가 되었을때 쓰는 함수
+func introduce(){
+print("Hi I'm \(name)")
+}
+
+// 구조체 자체로 쓰는 함수
+static func myAge(){
+print("I'm 24)" )
+}
+
+
+}
+
+
+Test.myAge()// 구조체 자체 함수 
+
+var test = Test()
+test.introduce() // 인스턴스 후에 쓰는 함수 
+
+
+```
+
+---
+
+
+## 클래스 ( Class )
+
+* class 키워드로 정의 가능하다.
+* class 는 reference 타입이다. 
+* 상속의 개념이 가능하다. 
+* 다중상속이 되지않는다. 
+
+### 클래스 사용하기 
+
+* init (초기화 메서드)
+* stored property (저장 프로퍼티)
+* Lazy stored proprety 
+* Computed property ( 계산 프로퍼티)
+
+
+```swift
 
 
 
 
 
+```
 
 
 
