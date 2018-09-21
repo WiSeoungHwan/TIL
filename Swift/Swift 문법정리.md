@@ -1,6 +1,6 @@
 #  Swift 문법 정리
 
-야곰님의 강의를 정리하는 중입니다. 
+야곰님의 강의에 살을 붙여 정리하는 중입니다. 
 
 ---
 
@@ -654,14 +654,30 @@ test.introduce() // 인스턴스 후에 쓰는 함수
 
 ### 클래스 사용하기 
 
+1. 용도에 따라 프로퍼티를 다양하게 사용할 수 있다. 
 * init (초기화 메서드)
 * stored property (저장 프로퍼티)
 * Lazy stored proprety 
 * Computed property ( 계산 프로퍼티)
 
-
 ```swift
 
+// 클래스 선언 
+class sumeClass: 부모클래스이름 {
+//프로퍼티 선언부 
+var num = 10 // stored property
+lazy var num1 = self.num // lazy property
+var add: Int{ return num * num1 } //Computed property
+
+}
+
+
+
+//메서드 선언부 
+
+
+
+}
 
 
 
