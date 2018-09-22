@@ -1,3 +1,3 @@
 # TIL
-Today I Learned :)
+Every I Learned :)
 
