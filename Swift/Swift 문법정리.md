@@ -665,9 +665,11 @@ test.introduce() // 인스턴스 후에 쓰는 함수
 // 클래스 선언 
 class sumeClass: 부모클래스이름 {
 //프로퍼티 선언부 
+let name = "SeongHwan"
 var num = 10 // stored property
 lazy var num1 = self.num // lazy property
 var add: Int{ return num * num1 } //Computed property
+
 
 }
 
