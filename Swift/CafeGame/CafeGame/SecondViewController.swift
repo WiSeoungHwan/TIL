@@ -18,9 +18,9 @@ class SecondViewController: UIViewController {
         menu.frame = CGRect(x: 180, y: 100, width: 50, height: 50)
         menu.textColor = .white
         menu.shadowColor = .black
+        menu.font = UIFont.systemFont(ofSize: CGFloat(10))
         menu.text = "Menu"
         view.addSubview(menu)
-        
         
         
     }
