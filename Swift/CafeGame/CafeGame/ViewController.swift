@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     let completeButton = UIButton()
     let titleImageView = UIImageView()
     let titleImage = UIImage(named: "title")
-    public var userName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
         navigationController?.navigationBar.isHidden = true
+        // self.title = "시작화면"
         name.frame = CGRect(x: 100, y: 400, width: 200, height: 50)
         name.backgroundColor = .white
         name.textColor = .black
@@ -39,8 +40,9 @@ class ViewController: UIViewController {
     
     @objc func completButtonDidTap(){
         completeButton.setTitleColor(.gray, for: .selected)
-        userName = name.text
+        SecondViewController.userName = name.text
         navigationController?.pushViewController(SecondViewController(), animated: true)
+        
         
     }
     override func didReceiveMemoryWarning() {
