@@ -15,15 +15,18 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .brown
         menu.backgroundColor = .brown
-        menu.frame = CGRect(x: 180, y: 100, width: 50, height: 50)
+        menu.frame = CGRect(x: 40, y: 40, width: 100, height: 100)
         menu.textColor = .white
         menu.shadowColor = .black
-        menu.font = UIFont.systemFont(ofSize: CGFloat(10))
+        menu.font = UIFont.systemFont(ofSize: CGFloat(40))
         menu.text = "Menu"
+        menu.textAlignment = .center
         view.addSubview(menu)
         
         
+        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
