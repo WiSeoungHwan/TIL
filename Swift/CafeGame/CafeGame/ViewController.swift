@@ -11,16 +11,22 @@ import UIKit
 class ViewController: UIViewController {
     let name = UITextField()
     let completeButton = UIButton()
-    let svc = SecondViewController()
+    let titleImageView = UIImageView()
+    let titleImage = UIImage(named: "title")
     public var userName: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
+        navigationController?.navigationBar.isHidden = true
         name.frame = CGRect(x: 100, y: 400, width: 200, height: 50)
         name.backgroundColor = .white
         name.textColor = .black
         name.placeholder = "이름을 입력해주세요"
         view.addSubview(name)
+        
+        titleImageView.frame = CGRect(x: 60, y: 80, width: 300, height: 300)
+        titleImageView.image = titleImage
+        view.addSubview(titleImageView)
         
         completeButton.frame = CGRect(x: 180, y: 460, width: 50, height: 50)
         completeButton.backgroundColor = .white
@@ -34,7 +40,7 @@ class ViewController: UIViewController {
     @objc func completButtonDidTap(){
         completeButton.setTitleColor(.gray, for: .selected)
         userName = name.text
-        present(svc, animated: true)
+        navigationController?.pushViewController(SecondViewController(), animated: true)
         
     }
     override func didReceiveMemoryWarning() {

@@ -12,12 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navigationController1: UINavigationController? // 네비게이션 컨트롤러 변수 선언하기
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        if let window = window {
+            let mainVC = ViewController()
+            navigationController1 = UINavigationController(rootViewController: mainVC)
+            navigationController1?.navigationBar.isHidden = true// 네비게이션 바 숨김 여부
+            window.rootViewController = navigationController1
+            window.makeKeyAndVisible()
+        }
         return true
     }
 
