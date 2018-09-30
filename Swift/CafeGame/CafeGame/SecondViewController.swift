@@ -72,7 +72,15 @@ class SecondViewController: UIViewController {
         let okAlertAction = UIAlertAction(title: "네", style: .destructive) { _ in
             self.navigationController?.pushViewController(ThirdViewController(), animated: true)
         }
-        let cancelAlertAction = UIAlertAction(title: "아니요", style: .default, handler: nil)
+        let cancelAlertAction = UIAlertAction(title: "아니요", style: .default){ _ in
+            if let name = SecondViewController.userName{
+                self.totalPriceTextView.text = "\(name) 님의 주문 내역입니다. \n"
+                self.totalPrice = 0
+            }else{
+                self.totalPriceTextView.text = "고객 님의 주문 내역입니다. \n"
+                self.totalPrice = 0
+            }
+        }
         
         alertController.addAction(okAlertAction)
         alertController.addAction(cancelAlertAction)
