@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .brown
         navigationController?.navigationBar.isHidden = true
-        // self.title = "시작화면"
+        self.title = "시작화면"
         name.frame = CGRect(x: 100, y: 400, width: 200, height: 50)
         name.backgroundColor = .white
         name.textColor = .black

@@ -100,7 +100,7 @@ class SecondViewController: UIViewController {
         }
         
     }
-    func addMenuImage(menu: CafeMenu,imageName: String, rect1: CGRect){
+    func addMenuImage(menu: CafeMenu, imageName: String, rect1: CGRect){
         let menuImage = UIImage(named: imageName)
         menu.addMenu(image: menuImage!, rect: rect1)
         view.addSubview(menu.menuImageView)
