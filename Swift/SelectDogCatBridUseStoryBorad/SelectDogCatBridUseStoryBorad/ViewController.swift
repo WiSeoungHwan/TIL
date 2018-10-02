@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
+        
         if identifier == "Dog" || identifier == "Cat"  {
             return true
         }else if identifier == "Bird"{
