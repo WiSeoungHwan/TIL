@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SecondViewController: UIViewController {
+    var databaseHandle : DatabaseHandle!
+    var databaseRefer : DatabaseReference!
     let menu = UILabel()
     let order = UIButton()
     let totalPriceTextView = UITextView()
     var totalPrice: Int = 0
-    public static var userName: String? //static으로 안하니까 안되더라 
+    var userName: String?
 //    let backBarButtonItem: UIBarButtonItem = {
 //        let barButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: #selector(backBtnDidtap))
 //        return barButtonItem
@@ -23,6 +26,11 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        databaseHandle = databaseRefer.child("username").observe(.childAdded, with: {(data) in
+            self.userName = (data.value as? String)!
+            debugPrint(self.userName)
+        })
         view.backgroundColor = .brown
         navigationController?.navigationBar.isHidden = false // 네비게이션 들어내기
         
@@ -38,11 +46,7 @@ class SecondViewController: UIViewController {
         
         totalPriceTextView.backgroundColor = .white
         totalPriceTextView.frame = CGRect(x: 50, y: 450, width: 300, height: 200)
-        if let name = SecondViewController.userName{
-            totalPriceTextView.text = "\(name) 님의 주문 내역입니다. \n"
-        }else{
-            totalPriceTextView.text = "고객 님의 주문 내역입니다. \n"
-        }
+        totalPriceTextView.text = "\(userName) 님의 주문 내역입니다. \n"
         view.addSubview(totalPriceTextView)
         
         addMenuImage(menu: americano, imageName: "americano", rect1: CGRect(x: 50, y: 150, width: 100, height: 120))
@@ -73,7 +77,7 @@ class SecondViewController: UIViewController {
             self.navigationController?.pushViewController(ThirdViewController(), animated: true)
         }
         let cancelAlertAction = UIAlertAction(title: "아니요", style: .default){ _ in
-            if let name = SecondViewController.userName{
+            if let name = self.userName {
                 self.totalPriceTextView.text = "\(name) 님의 주문 내역입니다. \n"
                 self.totalPrice = 0
             }else{

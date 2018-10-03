@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController {
+    var databaseRefer : DatabaseReference!
     let name = UITextField()
     let completeButton = UIButton()
     let titleImageView = UIImageView()
@@ -16,6 +18,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Create Record into Firebase
+        databaseRefer = Database.database().reference()
+        databaseRefer.child("username")
+        
+        
+        
+        // Read Data From Firebase
+        
         view.backgroundColor = .brown
         navigationController?.navigationBar.isHidden = true
         self.title = "시작화면"
@@ -40,9 +50,10 @@ class ViewController: UIViewController {
     
     @objc func completButtonDidTap(){
         completeButton.setTitleColor(.gray, for: .selected)
-        SecondViewController.userName = name.text
         navigationController?.pushViewController(SecondViewController(), animated: true)
+        databaseRefer.child("username").childByAutoId().setValue(name.text)
         
+
         
     }
     override func didReceiveMemoryWarning() {

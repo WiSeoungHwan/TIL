@@ -1,0 +1,6 @@
+framework module Pods_CafeGame {
+  umbrella header "Pods-CafeGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,9 +14,12 @@
 		3CE67AD7215B46BE004D0F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE67AD6215B46BE004D0F22 /* Assets.xcassets */; };
 		3CE67ADA215B46BE004D0F22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE67AD8215B46BE004D0F22 /* LaunchScreen.storyboard */; };
 		3CE67AE2215B5A1D004D0F22 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE67AE1215B5A1D004D0F22 /* SecondViewController.swift */; };
+		3CFFCC832164AC4C0040A409 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CFFCC822164AC4C0040A409 /* GoogleService-Info-3.plist */; };
+		D88570E156D734754D54EE49 /* Pods_CafeGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995BE77D91E88757DE93F687 /* Pods_CafeGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C45430CCC2704E30DA9A0B1 /* Pods-CafeGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeGame.debug.xcconfig"; path = "Target Support Files/Pods-CafeGame/Pods-CafeGame.debug.xcconfig"; sourceTree = "<group>"; };
 		3C51B06021609CDA005A1F09 /* CafeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeMenu.swift; sourceTree = "<group>"; };
 		3CA6E23A2160FF7C0018E1CD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		3CE67ACC215B46BD004D0F22 /* CafeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +29,9 @@
 		3CE67AD9215B46BE004D0F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CE67ADB215B46BE004D0F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE67AE1215B5A1D004D0F22 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3CFFCC822164AC4C0040A409 /* GoogleService-Info-3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-3.plist"; path = "../../../../Downloads/GoogleService-Info-3.plist"; sourceTree = "<group>"; };
+		995BE77D91E88757DE93F687 /* Pods_CafeGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4201C3E367EC3FE8A87CB31 /* Pods-CafeGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeGame.release.xcconfig"; path = "Target Support Files/Pods-CafeGame/Pods-CafeGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88570E156D734754D54EE49 /* Pods_CafeGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				3CE67ACE215B46BD004D0F22 /* CafeGame */,
 				3CE67ACD215B46BD004D0F22 /* Products */,
+				ACE6F6AF611242BD2F2E418C /* Pods */,
+				9056F6332DD0B9AFED268280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,11 +72,29 @@
 				3CE67AE1215B5A1D004D0F22 /* SecondViewController.swift */,
 				3CA6E23A2160FF7C0018E1CD /* ThirdViewController.swift */,
 				3C51B06021609CDA005A1F09 /* CafeMenu.swift */,
+				3CFFCC822164AC4C0040A409 /* GoogleService-Info-3.plist */,
 				3CE67AD6215B46BE004D0F22 /* Assets.xcassets */,
 				3CE67AD8215B46BE004D0F22 /* LaunchScreen.storyboard */,
 				3CE67ADB215B46BE004D0F22 /* Info.plist */,
 			);
 			path = CafeGame;
+			sourceTree = "<group>";
+		};
+		9056F6332DD0B9AFED268280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995BE77D91E88757DE93F687 /* Pods_CafeGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACE6F6AF611242BD2F2E418C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C45430CCC2704E30DA9A0B1 /* Pods-CafeGame.debug.xcconfig */,
+				C4201C3E367EC3FE8A87CB31 /* Pods-CafeGame.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE67ADE215B46BE004D0F22 /* Build configuration list for PBXNativeTarget "CafeGame" */;
 			buildPhases = (
+				57FBECDB1BA88E583DF61342 /* [CP] Check Pods Manifest.lock */,
 				3CE67AC8215B46BD004D0F22 /* Sources */,
 				3CE67AC9215B46BD004D0F22 /* Frameworks */,
 				3CE67ACA215B46BD004D0F22 /* Resources */,
+				67CEE4545674CB912615601C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,11 +158,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE67ADA215B46BE004D0F22 /* LaunchScreen.storyboard in Resources */,
+				3CFFCC832164AC4C0040A409 /* GoogleService-Info-3.plist in Resources */,
 				3CE67AD7215B46BE004D0F22 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57FBECDB1BA88E583DF61342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67CEE4545674CB912615601C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafeGame/Pods-CafeGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CafeGame/Pods-CafeGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CE67AC8215B46BD004D0F22 /* Sources */ = {
@@ -278,6 +359,7 @@
 		};
 		3CE67ADF215B46BE004D0F22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C45430CCC2704E30DA9A0B1 /* Pods-CafeGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +377,7 @@
 		};
 		3CE67AE0215B46BE004D0F22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4201C3E367EC3FE8A87CB31 /* Pods-CafeGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
