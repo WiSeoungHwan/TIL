@@ -24,7 +24,7 @@ class SecondViewController: UIViewController {
 
 extension SecondViewController: LoginSystemProtocol{
     func loginBtnDidTap(id: String) {
-        completLabel.text = id
+        completLabel.text = "\(id) 님 환영합니다"
     }
     
     
