@@ -1,4 +1,5 @@
-#  Closure 
+#  Closure (람다식)
+
 
 
 1. swift의 모든 함수의 기본은 Closure이다. 
