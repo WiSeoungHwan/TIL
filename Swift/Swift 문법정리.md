@@ -654,28 +654,51 @@ test.introduce() // 인스턴스 후에 쓰는 함수
 
 ### 클래스 사용하기 
 
-1. 용도에 따라 프로퍼티를 다양하게 사용할 수 있다. 
+1. 프로퍼티 
 * init (초기화 메서드)
 * stored property (저장 프로퍼티)
 * Lazy stored proprety 
 * Computed property ( 계산 프로퍼티)
 
+2. 메서드 
+* instanceMethod(인스턴스 메서드)
+* staticMethod(스태틱 메서드)
+* classMethod(클래스 메서드)
+
+
+
 ```swift
 
 // 클래스 선언 
 class sumeClass: 부모클래스이름 {
-//프로퍼티 선언부 
-let name = "SeongHwan"
-var num = 10 // stored property
-lazy var num1 = self.num // lazy property
-var add: Int{ return num * num1 } //Computed property
-
-
-}
+    //프로퍼티 선언부 
+    let name = "SeongHwan"
+    var num = 10 // stored property
+    lazy var num1 = self.num // lazy property
+    var add: Int{ return num + num1 } //Computed property
 
 
 
-//메서드 선언부 
+	//메서드 선언부 
+    // 인스턴스 메서드 
+    // 클래스를 인스턴스 시에 사용할 수 있다.
+	func instanceMethod(){
+		print("instanceMethod")
+   	}
+   	// 스태틱 메서드 
+    // 클래스 자체를 호출해서 사용 가능한 메서드 이다. 
+	static func staticMethod(){
+		print("staticMethod")
+   	}
+    //클래스 메서드 
+    // 클래스 내에서는 static 메서드와 동일 하다.
+    // 클래스 메서드는 오버라이딩이 가능하다.
+    class func classMethod(){
+		print("classMethod")
+    }
+    
+    
+
 
 
 
