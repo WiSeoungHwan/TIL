@@ -694,7 +694,7 @@ class sumeClass: 부모클래스이름 {
     // 클래스 내에서는 static 메서드와 동일 하다.
     // 클래스 메서드는 오버라이딩이 가능하다.
     class func classMethod(){
-		print("classMethod")
+	print("classMethod")
     }
     
     
