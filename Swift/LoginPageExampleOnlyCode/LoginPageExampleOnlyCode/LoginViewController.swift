@@ -16,15 +16,11 @@ class LoginViewController: UIViewController {
     var signUpButton = UIButton()
     var rememberMeSwitch = UISwitch()
     var rememberMeLabel = UILabel()
-    var isOnRememberSwitch = false
     var delegate: LoginSystemProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        isOnRememberSwitch = UserDefaults.standard.value(forKey: "RememberMe") != nil
-        if isOnRememberSwitch {
-            navigationController?.pushViewController(SecondViewController(), animated: true)
-        }
+        
         createLogo()
         loginButton = createBtn(buttonName: "Login", rect: CGRect(x: 45, y: 650, width: 300, height: 60))
         idTextField = createTextField(leftImageName: "Id", textRect: CGRect(x: 90, y: 400, width: 230, height: 40))
