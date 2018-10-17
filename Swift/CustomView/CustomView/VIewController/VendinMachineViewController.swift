@@ -25,9 +25,15 @@ class VendinMachineViewController: UIViewController {
 }
 extension VendinMachineViewController: DrinkViewDelegate{
     func increase(_ drinkView: DrinkView) {
+        guard let currentNum = Int(drinkView.countLabel.text ?? "0") else { return}
+        drinkView.countLabel.text = "\( currentNum + 1)"
         print("+")
     }
     func decrease(_ drinkView: DrinkView) {
+        guard let currentNum = Int(drinkView.countLabel.text ?? "0") else { return}
+        if currentNum > 0 {
+            drinkView.countLabel.text = "\( currentNum - 1)"
+        }
         print("-")
     }
 }

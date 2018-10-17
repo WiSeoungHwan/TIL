@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         pwTextField.topAnchor.constraint(equalTo: userTextField.bottomAnchor, constant: 50).isActive = true
         pwTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
         pwTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50).isActive = true
+        
        
         
         

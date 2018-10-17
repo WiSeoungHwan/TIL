@@ -17,7 +17,7 @@ final class DrinkView: UIView {
     private let drinkImageView: UIImageView = UIImageView()
     private let decreaseButton: UIButton = UIButton()
     private let increaseButton: UIButton = UIButton()
-    private let countLabel: UILabel = UILabel()
+    let countLabel: UILabel = UILabel()
     
     @IBInspectable // 스토리보드에서 실시간으로 적용되는 키워드
     var image: UIImage? {
