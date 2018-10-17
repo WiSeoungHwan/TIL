@@ -6,14 +6,15 @@
 //  Copyright © 2018년 Wi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Menu {
+class Menu: UIViewController{
     var name: String
     var price: Int
-    
-    init(name: String, price: Int) {
+    var image: String
+    init(name: String, price: Int, image: String) {
         self.name = name
         self.price = price
+        self.image = image
     }
 }

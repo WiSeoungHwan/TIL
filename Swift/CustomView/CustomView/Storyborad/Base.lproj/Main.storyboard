@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vendin Machine View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VendinMachineViewController" customModule="CustomView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-Vm-ZTe">
+                                <rect key="frame" x="10" y="30" width="355" height="387"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYn-ag-cFo" customClass="DrinkView" customModule="CustomView" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="198.5" width="162.5" height="178.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYe-Jx-nbQ" customClass="DrinkView" customModule="CustomView" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="162.5" height="178.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-2v-lqc" customClass="DrinkView" customModule="CustomView" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="10" width="162.5" height="178.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEj-bU-yCO" customClass="DrinkView" customModule="CustomView" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="198.5" width="162.5" height="178.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="g2u-2v-lqc" firstAttribute="leading" secondItem="WYe-Jx-nbQ" secondAttribute="trailing" constant="10" id="0B7-WO-ZMV"/>
+                                    <constraint firstItem="DYn-ag-cFo" firstAttribute="leading" secondItem="E5f-Vm-ZTe" secondAttribute="leading" constant="10" id="0xp-3s-mKE"/>
+                                    <constraint firstAttribute="trailing" secondItem="g2u-2v-lqc" secondAttribute="trailing" constant="10" id="3G3-Yq-2F5"/>
+                                    <constraint firstItem="WYe-Jx-nbQ" firstAttribute="top" secondItem="E5f-Vm-ZTe" secondAttribute="top" constant="10" id="3zF-6p-mLw"/>
+                                    <constraint firstItem="gEj-bU-yCO" firstAttribute="leading" secondItem="DYn-ag-cFo" secondAttribute="trailing" constant="10" id="8HZ-sI-SSm"/>
+                                    <constraint firstItem="DYn-ag-cFo" firstAttribute="width" secondItem="WYe-Jx-nbQ" secondAttribute="width" id="ELM-46-HD6"/>
+                                    <constraint firstItem="gEj-bU-yCO" firstAttribute="width" secondItem="WYe-Jx-nbQ" secondAttribute="width" id="EV2-wy-m0P"/>
+                                    <constraint firstItem="DYn-ag-cFo" firstAttribute="top" secondItem="WYe-Jx-nbQ" secondAttribute="bottom" constant="10" id="FEz-5b-SM5"/>
+                                    <constraint firstItem="gEj-bU-yCO" firstAttribute="top" secondItem="g2u-2v-lqc" secondAttribute="bottom" constant="10" id="FOd-dD-zKj"/>
+                                    <constraint firstAttribute="bottom" secondItem="DYn-ag-cFo" secondAttribute="bottom" constant="10" id="Ni2-xI-ahb"/>
+                                    <constraint firstAttribute="trailing" secondItem="gEj-bU-yCO" secondAttribute="trailing" constant="10" id="Q0V-Gt-96E"/>
+                                    <constraint firstItem="WYe-Jx-nbQ" firstAttribute="leading" secondItem="E5f-Vm-ZTe" secondAttribute="leading" constant="10" id="TLU-vx-dBS"/>
+                                    <constraint firstItem="gEj-bU-yCO" firstAttribute="height" secondItem="WYe-Jx-nbQ" secondAttribute="height" id="aqK-y7-OAX"/>
+                                    <constraint firstAttribute="bottom" secondItem="gEj-bU-yCO" secondAttribute="bottom" constant="10" id="bLn-RE-nxN"/>
+                                    <constraint firstItem="DYn-ag-cFo" firstAttribute="height" secondItem="WYe-Jx-nbQ" secondAttribute="height" id="d3T-2t-l2l"/>
+                                    <constraint firstItem="g2u-2v-lqc" firstAttribute="top" secondItem="E5f-Vm-ZTe" secondAttribute="top" constant="10" id="kTF-aY-T20"/>
+                                    <constraint firstItem="g2u-2v-lqc" firstAttribute="width" secondItem="WYe-Jx-nbQ" secondAttribute="width" id="uJM-bL-Ljf"/>
+                                    <constraint firstItem="g2u-2v-lqc" firstAttribute="height" secondItem="WYe-Jx-nbQ" secondAttribute="height" id="vcG-3m-qsK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E5f-Vm-ZTe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="MQi-4d-LeS"/>
+                            <constraint firstItem="E5f-Vm-ZTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ZdE-ng-iP2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E5f-Vm-ZTe" secondAttribute="bottom" constant="250" id="j90-oa-zzT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E5f-Vm-ZTe" secondAttribute="trailing" constant="10" id="vfF-hO-1Pu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="drinkViews" destination="WYe-Jx-nbQ" collectionClass="NSMutableArray" id="wVo-ke-yZL"/>
+                        <outletCollection property="drinkViews" destination="g2u-2v-lqc" collectionClass="NSMutableArray" id="S8d-NB-YgN"/>
+                        <outletCollection property="drinkViews" destination="gEj-bU-yCO" collectionClass="NSMutableArray" id="25u-BF-DBv"/>
+                        <outletCollection property="drinkViews" destination="DYn-ag-cFo" collectionClass="NSMutableArray" id="fl1-C8-I5Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
