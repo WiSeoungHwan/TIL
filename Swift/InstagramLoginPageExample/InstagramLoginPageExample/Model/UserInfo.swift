@@ -9,9 +9,6 @@
 import Foundation
 
 class UserInfo{
-    
     private var id: String?
     private var pw: String?
-    var userDefault = UserDefaults.standard
-    
 }

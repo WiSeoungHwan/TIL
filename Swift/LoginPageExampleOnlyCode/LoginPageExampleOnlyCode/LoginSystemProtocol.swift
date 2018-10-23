@@ -10,7 +10,6 @@ import UIKit
 
 protocol LoginSystemProtocol {
     func loginBtnDidTap(id: String)
-    
 }
 
 
