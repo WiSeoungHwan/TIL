@@ -1,18 +1,22 @@
 //
-//  CustomNavigationControllerViewController.swift
-//  TabBarControllerExample
+//  CustomTabBarController.swift
+//  NotificationExample
 //
-//  Created by Wi on 2018. 10. 5..
-//  Copyright © 2018년 Wi. All rights reserved.
+//  Created by Wi on 23/10/2018.
+//  Copyright © 2018 Wi. All rights reserved.
 //
 
 import UIKit
 
-class CustomNavigationControllerViewController: UINavigationController {
+class CustomTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let aView = AViewController()
+        let bView = BViewController()
+        self.viewControllers = [aView,bView]
+        aView.tabBarItem.title = "A"
+        bView.tabBarItem.title = "B"
     }
     
 

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LoginViewDelegate {
+    func loginButtonDidTab(id: String?, pw: String?)
+    func signUpButtonDidTab()
+}
 class LoginView: UIView {
     private let instagramLogoStr = "instagramLogo"
     private let logoImageView = UIImageView()
@@ -15,7 +19,9 @@ class LoginView: UIView {
     private let pwTextField = UITextField()
     private let loginButton = UIButton()
     private let signUpButton = UIButton()
+    var delegate: LoginViewDelegate?
     let margin: CGFloat = 10
+
     override init(frame: CGRect) {// Use Code
         super.init(frame: frame)
         configure()
@@ -27,19 +33,33 @@ class LoginView: UIView {
         autoLayOut()
     }
     
+    
+    
+    
+    @objc func buttonDidtap(_ sender: UIButton){
+        switch sender {
+        case loginButton:
+            print("loginButtonViewTab")
+            delegate?.loginButtonDidTab(id: idTextField.text, pw: pwTextField.text)
+        case signUpButton:
+            delegate?.signUpButtonDidTab()
+        default:
+            break
+        }
+    }
+
     func configure(){
+        
         //logo
         logoImageView.image = UIImage(named: instagramLogoStr)
         logoImageView.contentMode = .center
         
         //textfield
-        idTextField.borderStyle = .bezel
         idTextField.backgroundColor = UIColor.white
         idTextField.placeholder = "아이디"
         idTextField.textAlignment = .left
         idTextField.borderStyle = .roundedRect
         
-        pwTextField.borderStyle = .bezel
         pwTextField.backgroundColor = UIColor.white
         pwTextField.placeholder = "비밀번호"
         pwTextField.textAlignment = .left
@@ -51,6 +71,7 @@ class LoginView: UIView {
         signUpButton.setTitle("아이디가 없나요?", for: .normal)
         signUpButton.titleLabel?.textAlignment = .right
         signUpButton.setTitleColor(.blue, for: .normal)
+        signUpButton.setTitleColor(.gray, for: .selected)
         signUpButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         signUpButton.addTarget(self, action: #selector(buttonDidtap), for: .touchUpInside)
         
@@ -103,17 +124,6 @@ class LoginView: UIView {
 //        loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
     }
     
-    @objc func buttonDidtap(_ sender: UIButton){
-        switch sender {
-        case loginButton:
-            break
-        case signUpButton:
-            
-            break
-        default:
-            break
-        }
-    }
     
 
 }

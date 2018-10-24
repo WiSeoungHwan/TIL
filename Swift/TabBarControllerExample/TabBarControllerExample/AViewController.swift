@@ -12,9 +12,16 @@ class AViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       let rightBtn = UIBarButtonItem(title: "Right", style: .done, target: self, action: #selector(someMethod))
+        self.navigationItem.setRightBarButton(rightBtn, animated: true)
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        self.tabBarItem.title = "A"
     }
     
+    @objc func someMethod() {
+        let viewController = SomeViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
     /*
     // MARK: - Navigation

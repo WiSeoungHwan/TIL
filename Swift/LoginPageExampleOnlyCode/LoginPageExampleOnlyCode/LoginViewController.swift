@@ -70,10 +70,11 @@ class LoginViewController: UIViewController {
         signUpAlertController.addTextField()
         signUpAlertController.addTextField()
         let okAction = UIAlertAction(title: "SignUp", style: .default){ _ in
-            guard let id = signUpAlertController.textFields?[0].text, let pw = signUpAlertController.textFields?[1].text else{return}
+            guard let id = signUpAlertController.textFields?[0].text,
+                let pw = signUpAlertController.textFields?[1].text, else{return}
             print(id)
             print(pw)
-            if id.count < 5 , pw.count < 5 {
+            if id.count < 4 , pw.count < 4 {
                 let signUpFailAlert = UIAlertController(title: "Sign Up Fail", message: "아이디와 비밀번호를 4자 이상 입력해주세요 ", preferredStyle: .alert)
                 let signUpOkAction = UIAlertAction(title: "OK", style: .default, handler: { (self) in
                     return
@@ -81,10 +82,10 @@ class LoginViewController: UIViewController {
                 signUpFailAlert.addAction(signUpOkAction)
                 self.present(signUpFailAlert, animated: true, completion: nil)
             }else {
-                UserDefaults.standard.set(pw, forKey: id)
+                UserDefaults.standard.set(pw, id)
             }
             
-        
+            
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -93,7 +94,7 @@ class LoginViewController: UIViewController {
         signUpAlertController.textFields?[0].leftViewMode = .always
         signUpAlertController.textFields?[1].leftView = UIImageView(image: UIImage(named: "Password"))
         signUpAlertController.textFields?[1].leftViewMode = .always
-
+        
         signUpAlertController.addAction(okAction)
         signUpAlertController.addAction(cancelAction)
         present(signUpAlertController, animated: true)

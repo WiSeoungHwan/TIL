@@ -13,6 +13,10 @@
 		3C53C29A217720BE004BF629 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C299217720BE004BF629 /* LoginViewController.swift */; };
 		3C53C29C21772298004BF629 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C29B21772298004BF629 /* UserInfo.swift */; };
 		3C53C29F21772B3A004BF629 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C29E21772B3A004BF629 /* LoginView.swift */; };
+		3C9A7E3B21802D10002E45A9 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E3A21802D10002E45A9 /* MyFeedViewController.swift */; };
+		3C9A7E3D21802E2A002E45A9 /* MyFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E3C21802E2A002E45A9 /* MyFeedView.swift */; };
+		3C9A7E5F21804D49002E45A9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E5E21804D49002E45A9 /* ProfileTableViewCell.swift */; };
+		3C9A7E6121805BAF002E45A9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E6021805BAF002E45A9 /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3C53C299217720BE004BF629 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C53C29B21772298004BF629 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		3C53C29E21772B3A004BF629 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3C9A7E3A21802D10002E45A9 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		3C9A7E3C21802E2A002E45A9 /* MyFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedView.swift; sourceTree = "<group>"; };
+		3C9A7E5E21804D49002E45A9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		3C9A7E6021805BAF002E45A9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				3C53C299217720BE004BF629 /* LoginViewController.swift */,
+				3C9A7E3A21802D10002E45A9 /* MyFeedViewController.swift */,
+				3C9A7E6021805BAF002E45A9 /* CustomTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -87,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				3C53C29E21772B3A004BF629 /* LoginView.swift */,
+				3C9A7E3C21802E2A002E45A9 /* MyFeedView.swift */,
+				3C9A7E5E21804D49002E45A9 /* ProfileTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9A7E6121805BAF002E45A9 /* CustomTabBarController.swift in Sources */,
+				3C9A7E3D21802E2A002E45A9 /* MyFeedView.swift in Sources */,
+				3C9A7E5F21804D49002E45A9 /* ProfileTableViewCell.swift in Sources */,
 				3C53C29A217720BE004BF629 /* LoginViewController.swift in Sources */,
 				3C53C29C21772298004BF629 /* UserInfo.swift in Sources */,
+				3C9A7E3B21802D10002E45A9 /* MyFeedViewController.swift in Sources */,
 				3C53C29F21772B3A004BF629 /* LoginView.swift in Sources */,
 				3C53C28521771C5A004BF629 /* AppDelegate.swift in Sources */,
 			);

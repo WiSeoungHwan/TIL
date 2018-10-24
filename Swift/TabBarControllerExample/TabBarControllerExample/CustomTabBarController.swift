@@ -12,12 +12,13 @@ class CustomTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navi = CustomNavigationControllerViewController()
+        let aViewController = AViewController()
         
-        let sVC = SomeViewController()
+        let navi = UINavigationController(rootViewController: aViewController)
+        
         let bVC = BViewController()
         let cVC = CViewController()
-        self.viewControllers = [navi, bVC, cVC,sVC]
+        self.viewControllers = [navi, bVC, cVC]
         bVC.tabBarItem.title = "B"
         cVC.tabBarItem.title = "C"
         

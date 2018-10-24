@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SomeViewController: UINavigationController {
+class SomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
-        // Do any additional setup after loading the view.
+        
     }
     
 
