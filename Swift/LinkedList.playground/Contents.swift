@@ -24,7 +24,7 @@ class LinkedList {
     var size: Int {
         return 0
     }
-    func push(node: Node) {
+    func push(node: Node){
         size += 1
         if isEmpty {
             head = node
@@ -42,14 +42,15 @@ class LinkedList {
                 print("No Node")
                 return "No Node"
             }
-            size -= 1
-            while  {
-                
+            guard var node = head?.next else {return}
+            while let nextNode = node.next {
+                guard nextNode != nil else {
+                    return node.next?.value
+                }
+                node = nextNode
             }
-            return ""
         }  // 데이터 반출.
         func peek() -> String? {
-            guard 
             return ""
         } // 마지막 데이터 확인
 }
