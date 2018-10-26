@@ -58,6 +58,8 @@ var input = [5, 33, 1, 11, 10, 2, 7, 14, 9]
 //        }
 //    }
 //}
+
+
 var save = 0
 for i in 0...input.count - 1{
     var isSorted = true
@@ -73,3 +75,5 @@ for i in 0...input.count - 1{
     guard !isSorted else {break}
 }
 print("insertion sort \(input)")
+
+/// insert sort 완성하기  자료구조 알고리즘 정리하기 
