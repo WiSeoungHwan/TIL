@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Girl</key>
+	<array>
+		<string>블랙핑크</string>
+		<string>트와이스 </string>
+		<string>아이유 </string>
+		<string>레드벨벳</string>
+	</array>
+	<key>Boy</key>
+	<array>
+		<string>빅뱅</string>
+		<string>워너원</string>
+		<string>샤이니</string>
+	</array>
+</dict>
+</plist>
