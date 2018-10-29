@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var data: [String: AnyObject] = [:]
+    var data: [String: [String]] = [:]
     var idolArray: [[String]] = [[]]
+    var keysArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +20,11 @@ class ViewController: UIViewController {
     }
     func plistSerialization(){
         guard let path = Bundle.main.path(forResource: "idols", ofType: "plist"), let data = NSDictionary(contentsOf: URL(fileURLWithPath: path)) else {return}
-        self.data = data as! [String : AnyObject]
-        for i in self.data.values{
-            idolArray.append(i as! Array<String>)
-            
+        self.data = data as! [String : [String]]
+        for i in self.data.keys{
+            keysArray.append(i)
         }
-        print(idolArray)
+        print(keysArray)
     }
 
 }
@@ -34,13 +34,13 @@ extension ViewController: UITableViewDataSource{
         return data.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let array = idolArray[section]
+        let array = keysArray[section]
         return array.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        var array = idolArray[indexPath.section]
-        cell.textLabel?.text = array[indexPath.row]
+        
+        cell.textLabel?.text = self.data[keysArray[indexPath.section]]![indexPath.row]
         
         return cell
     }
