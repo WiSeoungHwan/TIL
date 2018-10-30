@@ -61,8 +61,8 @@ final class ViewController: UIViewController {
     if UIApplication.shared.canOpenURL(facebookURL){//canOpenURL 안쓰면 열림 쓰면 안열림
         // 3rdParty 앱에 대해서는  화이트 리스트 등록 필요 ios 9.0부터 기본앱을 제외한 앱에 대해 화이트 리스트 미등록시 canOpenURl false 반환
         //화이트 리스트 등록 하는 방법
-        //info.plist 에서
-        //sorceCode로 열어서 dict 밑에 붙여넣기
+//        info.plist 에서
+//        sorceCode로 열어서 dict 밑에 붙여넣기
 //        <key>LSApplicationQueriesSchemes</key>
 //        <array>
 //        <string>fb</string>
@@ -72,10 +72,14 @@ final class ViewController: UIViewController {
     print(UIApplication.shared.canOpenURL(facebookURL))
   }
     
-  
+  // 내가 만든 앱 열기
+    //새로만든 앱에서 info 에서 urlType 추가 하기
+    
+    //scheme으로 추가 할시 이름이 겹치게 되면 다른 앱이 열릴 수 있다.
+    
   @IBAction private func openMyApp(_ sender: Any) {
     print("\n---------- [ openMyApp ] ----------\n")
-    let myAppURL = URL(string: "http://maps.apple.com/?ll=55,40")!
+    let myAppURL = URL(string: "myApp://?name=abc&age=10")!
     if UIApplication.shared.canOpenURL(myAppURL){
         UIApplication.shared.open(myAppURL)
     }
