@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePickerControllerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qC-PX-dJM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="앨범" id="Wk5-l1-CdF">
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="eIK-Cg-iRq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="카메라" id="wgQ-EN-OpJ">
+                                        <connections>
+                                            <action selector="takePicture:" destination="BYZ-38-t0r" id="0b7-j1-jzR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="딜레이촬영" id="pfb-5z-1fy">
+                                        <connections>
+                                            <action selector="takePictureWithDelay:" destination="BYZ-38-t0r" id="7gr-j9-gGX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="동영상" id="ZXI-re-5vc">
+                                        <connections>
+                                            <action selector="recordingVideo:" destination="BYZ-38-t0r" id="sUf-te-gOB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UuI-a3-szT"/>
+                                    <barButtonItem title="Editing변경" id="F3R-xB-UMW">
+                                        <connections>
+                                            <action selector="toggleAllowsEditing:" destination="BYZ-38-t0r" id="jmT-zJ-Omv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-5I-fHg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c9j-5I-fHg" secondAttribute="bottom" id="Epy-hF-c18"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c9j-5I-fHg" secondAttribute="trailing" id="VXA-98-dVu"/>
+                            <constraint firstItem="1qC-PX-dJM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YiH-ei-2gO"/>
+                            <constraint firstItem="1qC-PX-dJM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kPx-hn-LiX"/>
+                            <constraint firstItem="c9j-5I-fHg" firstAttribute="top" secondItem="1qC-PX-dJM" secondAttribute="bottom" id="nlB-rP-Oc0"/>
+                            <constraint firstItem="1qC-PX-dJM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tTb-Rh-eU0"/>
+                            <constraint firstItem="c9j-5I-fHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uYD-O5-3SJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="c9j-5I-fHg" id="jI9-8k-WIS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="65"/>
+        </scene>
+    </scenes>
+</document>
