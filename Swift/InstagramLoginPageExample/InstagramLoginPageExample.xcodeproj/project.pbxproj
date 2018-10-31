@@ -13,10 +13,15 @@
 		3C53C29A217720BE004BF629 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C299217720BE004BF629 /* LoginViewController.swift */; };
 		3C53C29C21772298004BF629 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C29B21772298004BF629 /* UserInfo.swift */; };
 		3C53C29F21772B3A004BF629 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C29E21772B3A004BF629 /* LoginView.swift */; };
-		3C9A7E3B21802D10002E45A9 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E3A21802D10002E45A9 /* MyFeedViewController.swift */; };
+		3C97C3AB21894D6B00FD365F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3AA21894D6B00FD365F /* MainTabBarController.swift */; };
+		3C97C3BB2189569700FD365F /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3B52189569700FD365F /* MyFeedViewController.swift */; };
+		3C97C3BC2189569700FD365F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3B62189569700FD365F /* HomeViewController.swift */; };
+		3C97C3BD2189569700FD365F /* LoginTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3B72189569700FD365F /* LoginTabBarController.swift */; };
+		3C97C3BE2189569700FD365F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3B82189569700FD365F /* AddViewController.swift */; };
+		3C97C3BF2189569700FD365F /* HeartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3B92189569700FD365F /* HeartViewController.swift */; };
+		3C97C3C02189569700FD365F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97C3BA2189569700FD365F /* SearchViewController.swift */; };
 		3C9A7E3D21802E2A002E45A9 /* MyFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E3C21802E2A002E45A9 /* MyFeedView.swift */; };
 		3C9A7E5F21804D49002E45A9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E5E21804D49002E45A9 /* ProfileTableViewCell.swift */; };
-		3C9A7E6121805BAF002E45A9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A7E6021805BAF002E45A9 /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +33,15 @@
 		3C53C299217720BE004BF629 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C53C29B21772298004BF629 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		3C53C29E21772B3A004BF629 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		3C9A7E3A21802D10002E45A9 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		3C97C3AA21894D6B00FD365F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3C97C3B52189569700FD365F /* MyFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		3C97C3B62189569700FD365F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3C97C3B72189569700FD365F /* LoginTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTabBarController.swift; sourceTree = "<group>"; };
+		3C97C3B82189569700FD365F /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		3C97C3B92189569700FD365F /* HeartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartViewController.swift; sourceTree = "<group>"; };
+		3C97C3BA2189569700FD365F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3C9A7E3C21802E2A002E45A9 /* MyFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedView.swift; sourceTree = "<group>"; };
 		3C9A7E5E21804D49002E45A9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		3C9A7E6021805BAF002E45A9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +88,14 @@
 		3C53C29621771FD4004BF629 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3C97C3B82189569700FD365F /* AddViewController.swift */,
+				3C97C3B92189569700FD365F /* HeartViewController.swift */,
+				3C97C3B62189569700FD365F /* HomeViewController.swift */,
+				3C97C3B72189569700FD365F /* LoginTabBarController.swift */,
+				3C97C3B52189569700FD365F /* MyFeedViewController.swift */,
+				3C97C3BA2189569700FD365F /* SearchViewController.swift */,
 				3C53C299217720BE004BF629 /* LoginViewController.swift */,
-				3C9A7E3A21802D10002E45A9 /* MyFeedViewController.swift */,
-				3C9A7E6021805BAF002E45A9 /* CustomTabBarController.swift */,
+				3C97C3AA21894D6B00FD365F /* MainTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,13 +188,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C9A7E6121805BAF002E45A9 /* CustomTabBarController.swift in Sources */,
 				3C9A7E3D21802E2A002E45A9 /* MyFeedView.swift in Sources */,
+				3C97C3AB21894D6B00FD365F /* MainTabBarController.swift in Sources */,
 				3C9A7E5F21804D49002E45A9 /* ProfileTableViewCell.swift in Sources */,
+				3C97C3BF2189569700FD365F /* HeartViewController.swift in Sources */,
+				3C97C3BE2189569700FD365F /* AddViewController.swift in Sources */,
 				3C53C29A217720BE004BF629 /* LoginViewController.swift in Sources */,
+				3C97C3C02189569700FD365F /* SearchViewController.swift in Sources */,
 				3C53C29C21772298004BF629 /* UserInfo.swift in Sources */,
-				3C9A7E3B21802D10002E45A9 /* MyFeedViewController.swift in Sources */,
+				3C97C3BC2189569700FD365F /* HomeViewController.swift in Sources */,
 				3C53C29F21772B3A004BF629 /* LoginView.swift in Sources */,
+				3C97C3BD2189569700FD365F /* LoginTabBarController.swift in Sources */,
+				3C97C3BB2189569700FD365F /* MyFeedViewController.swift in Sources */,
 				3C53C28521771C5A004BF629 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = InstagramLoginPageExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = InstagramLoginPageExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
