@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         loginView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         loginView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
     }
+    //가입 Alert띄우기 
     func creatSignUpAlert(){
         let signUpAlertController = UIAlertController(title: "Sign Up", message: "사용하실 아이디와 비밀번호를 입력해주세요. \n (4자 이상)", preferredStyle: .alert)
         signUpAlertController.addTextField()
