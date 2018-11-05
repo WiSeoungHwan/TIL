@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     private func setupFirstMenus(){
         for i in (0 ..< UI.menuCount){
             let menuFrame = CGRect(x: 50, y: view.bounds.height - 110, width: UI.menuSize, height: UI.menuSize)
-            let button = makeMenuButtonWith(frame: menuFrame , title : "버튼\(i)")
+            let button = makeMenuButtonWith(frame: menuFrame , title : "버튼\(i + 1)")
             firstMenuContainer.append(button)
             
             if i == 0 {
@@ -47,8 +47,13 @@ class ViewController: UIViewController {
     @objc func firstMenuDidTap(_ sender: UIButton){
         sender.isSelected.toggle()
         
-        UIView.animate(withDuration: Time.middle, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [.curveEaseIn], animations: { 
-            for (idx,menu) in self.firstMenuContainer.enumerated(){
+        UIView.animate(withDuration: Time.middle, //몇초안에 재생을 완료할 것인지 
+                       delay: 0,
+                       usingSpringWithDamping: 0.8, // 튕기는 느낌
+                       initialSpringVelocity: 0, //튕김 가속도
+                       options: [.curveEaseIn], // 애니메이션 속도커브
+                       animations: { // 애니메이션
+            for (idx,menu) in self.firstMenuContainer.enumerated(){ // 튜플로 idx랑 배열값 동시에 받아오기
                 guard idx != 0 else {continue}
                 if sender.isSelected{
                     menu.transform = .identity
@@ -60,6 +65,13 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    /// makeButton
+    ///
+    /// - Parameters:
+    ///   - frame: buttonFrame
+    ///   - title: buttonTitle
+    /// - Returns: return button
     private func makeMenuButtonWith(frame: CGRect , title: String) -> UIButton{
         let button = UIButton(frame: frame)
         button.backgroundColor = randomColorGenerator()
@@ -69,6 +81,7 @@ class ViewController: UIViewController {
         view.addSubview(button)
         return button
     }
+    // 랜덤 색깔 반환 함수
     private func randomColorGenerator() -> UIColor{
         let red = CGFloat.random(in: 0 ... 1.0)
         let green = CGFloat.random(in: 0 ... 1.0)

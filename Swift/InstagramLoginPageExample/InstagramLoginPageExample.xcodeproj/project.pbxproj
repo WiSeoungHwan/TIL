@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C53C28521771C5A004BF629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C28421771C5A004BF629 /* AppDelegate.swift */; };
-		3C53C28C21771C5B004BF629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C53C28B21771C5B004BF629 /* Assets.xcassets */; };
 		3C53C28F21771C5B004BF629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C53C28D21771C5B004BF629 /* LaunchScreen.storyboard */; };
 		3C53C29A217720BE004BF629 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C299217720BE004BF629 /* LoginViewController.swift */; };
 		3C53C29C21772298004BF629 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53C29B21772298004BF629 /* UserInfo.swift */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		3C53C28121771C5A004BF629 /* InstagramLoginPageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLoginPageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C53C28421771C5A004BF629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C53C28B21771C5B004BF629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C53C28E21771C5B004BF629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C53C29021771C5B004BF629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C53C299217720BE004BF629 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				3C53C29821771FF1004BF629 /* View */,
 				3C53C29721771FE5004BF629 /* Model */,
 				3C53C29621771FD4004BF629 /* ViewController */,
-				3C53C28B21771C5B004BF629 /* Assets.xcassets */,
 				3C53C28D21771C5B004BF629 /* LaunchScreen.storyboard */,
 				3C53C29021771C5B004BF629 /* Info.plist */,
 			);
@@ -177,7 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C53C28F21771C5B004BF629 /* LaunchScreen.storyboard in Resources */,
-				3C53C28C21771C5B004BF629 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
