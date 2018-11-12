@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.7.3)
+  - CircleMenu (4.0.1)
+  - Kingfisher (4.10.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - CircleMenu
+  - Kingfisher
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CircleMenu
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  CircleMenu: d846569acbe805b75cef5793056707224240db64
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+
+PODFILE CHECKSUM: d64170b95f87571efdc0abc03863b0e03043efb0
+
+COCOAPODS: 1.6.0.beta.2
