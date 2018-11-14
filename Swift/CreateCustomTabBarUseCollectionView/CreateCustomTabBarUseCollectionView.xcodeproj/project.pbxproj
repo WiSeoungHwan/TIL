@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C18B1F4219AD6680070F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C18B1F3219AD6680070F17D /* AppDelegate.swift */; };
-		3C18B1F6219AD6680070F17D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C18B1F5219AD6680070F17D /* ViewController.swift */; };
-		3C18B1F9219AD6680070F17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C18B1F7219AD6680070F17D /* Main.storyboard */; };
-		3C18B1FB219AD6690070F17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C18B1FA219AD6690070F17D /* Assets.xcassets */; };
-		3C18B1FE219AD6690070F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C18B1FC219AD6690070F17D /* LaunchScreen.storyboard */; };
-		3C792B91219C312C00C9B306 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C792B90219C312C00C9B306 /* CollectionViewController.swift */; };
+		3C792BBD219C347400C9B306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C792BBC219C347400C9B306 /* AppDelegate.swift */; };
+		3C792BBF219C347400C9B306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C792BBE219C347400C9B306 /* ViewController.swift */; };
+		3C792BC7219C347500C9B306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C792BC5219C347500C9B306 /* LaunchScreen.storyboard */; };
+		3C792BD1219C3EAA00C9B306 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C792BD0219C3EAA00C9B306 /* CustomCell.swift */; };
+		3CD8DAA8219C58A0004DBA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD8DAA7219C58A0004DBA18 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C18B1F0219AD6680070F17D /* UIViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C18B1F3219AD6680070F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C18B1F5219AD6680070F17D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3C18B1F8219AD6680070F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C18B1FA219AD6690070F17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3C18B1FD219AD6690070F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3C18B1FF219AD6690070F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C792B90219C312C00C9B306 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		3C792BB9219C347400C9B306 /* CreateCustomTabBarUseCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateCustomTabBarUseCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C792BBC219C347400C9B306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C792BBE219C347400C9B306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C792BC6219C347500C9B306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C792BC8219C347500C9B306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C792BD0219C3EAA00C9B306 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		3CD8DAA7219C58A0004DBA18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3C18B1ED219AD6680070F17D /* Frameworks */ = {
+		3C792BB6219C347400C9B306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C18B1E7219AD6680070F17D = {
+		3C792BB0219C347400C9B306 = {
 			isa = PBXGroup;
 			children = (
-				3C18B1F2219AD6680070F17D /* UIViewPractice */,
-				3C18B1F1219AD6680070F17D /* Products */,
+				3C792BBB219C347400C9B306 /* CreateCustomTabBarUseCollectionView */,
+				3C792BBA219C347400C9B306 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3C18B1F1219AD6680070F17D /* Products */ = {
+		3C792BBA219C347400C9B306 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C18B1F0219AD6680070F17D /* UIViewPractice.app */,
+				3C792BB9219C347400C9B306 /* CreateCustomTabBarUseCollectionView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3C18B1F2219AD6680070F17D /* UIViewPractice */ = {
+		3C792BBB219C347400C9B306 /* CreateCustomTabBarUseCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				3C18B1F3219AD6680070F17D /* AppDelegate.swift */,
-				3C18B1F5219AD6680070F17D /* ViewController.swift */,
-				3C792B90219C312C00C9B306 /* CollectionViewController.swift */,
-				3C18B1F7219AD6680070F17D /* Main.storyboard */,
-				3C18B1FA219AD6690070F17D /* Assets.xcassets */,
-				3C18B1FC219AD6690070F17D /* LaunchScreen.storyboard */,
-				3C18B1FF219AD6690070F17D /* Info.plist */,
+				3C792BBC219C347400C9B306 /* AppDelegate.swift */,
+				3C792BBE219C347400C9B306 /* ViewController.swift */,
+				3C792BD0219C3EAA00C9B306 /* CustomCell.swift */,
+				3CD8DAA7219C58A0004DBA18 /* Assets.xcassets */,
+				3C792BC5219C347500C9B306 /* LaunchScreen.storyboard */,
+				3C792BC8219C347500C9B306 /* Info.plist */,
 			);
-			path = UIViewPractice;
+			path = CreateCustomTabBarUseCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C18B1EF219AD6680070F17D /* UIViewPractice */ = {
+		3C792BB8219C347400C9B306 /* CreateCustomTabBarUseCollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C18B202219AD6690070F17D /* Build configuration list for PBXNativeTarget "UIViewPractice" */;
+			buildConfigurationList = 3C792BCB219C347500C9B306 /* Build configuration list for PBXNativeTarget "CreateCustomTabBarUseCollectionView" */;
 			buildPhases = (
-				3C18B1EC219AD6680070F17D /* Sources */,
-				3C18B1ED219AD6680070F17D /* Frameworks */,
-				3C18B1EE219AD6680070F17D /* Resources */,
+				3C792BB5219C347400C9B306 /* Sources */,
+				3C792BB6219C347400C9B306 /* Frameworks */,
+				3C792BB7219C347400C9B306 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UIViewPractice;
-			productName = UIViewPractice;
-			productReference = 3C18B1F0219AD6680070F17D /* UIViewPractice.app */;
+			name = CreateCustomTabBarUseCollectionView;
+			productName = CreateCustomTabBarUseCollectionView;
+			productReference = 3C792BB9219C347400C9B306 /* CreateCustomTabBarUseCollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3C18B1E8219AD6680070F17D /* Project object */ = {
+		3C792BB1219C347400C9B306 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Wi;
 				TargetAttributes = {
-					3C18B1EF219AD6680070F17D = {
+					3C792BB8219C347400C9B306 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 3C18B1EB219AD6680070F17D /* Build configuration list for PBXProject "UIViewPractice" */;
+			buildConfigurationList = 3C792BB4219C347400C9B306 /* Build configuration list for PBXProject "CreateCustomTabBarUseCollectionView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +107,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 3C18B1E7219AD6680070F17D;
-			productRefGroup = 3C18B1F1219AD6680070F17D /* Products */;
+			mainGroup = 3C792BB0219C347400C9B306;
+			productRefGroup = 3C792BBA219C347400C9B306 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C18B1EF219AD6680070F17D /* UIViewPractice */,
+				3C792BB8219C347400C9B306 /* CreateCustomTabBarUseCollectionView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3C18B1EE219AD6680070F17D /* Resources */ = {
+		3C792BB7219C347400C9B306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C18B1FE219AD6690070F17D /* LaunchScreen.storyboard in Resources */,
-				3C18B1FB219AD6690070F17D /* Assets.xcassets in Resources */,
-				3C18B1F9219AD6680070F17D /* Main.storyboard in Resources */,
+				3CD8DAA8219C58A0004DBA18 /* Assets.xcassets in Resources */,
+				3C792BC7219C347500C9B306 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3C18B1EC219AD6680070F17D /* Sources */ = {
+		3C792BB5219C347400C9B306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C792B91219C312C00C9B306 /* CollectionViewController.swift in Sources */,
-				3C18B1F6219AD6680070F17D /* ViewController.swift in Sources */,
-				3C18B1F4219AD6680070F17D /* AppDelegate.swift in Sources */,
+				3C792BBF219C347400C9B306 /* ViewController.swift in Sources */,
+				3C792BBD219C347400C9B306 /* AppDelegate.swift in Sources */,
+				3C792BD1219C3EAA00C9B306 /* CustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3C18B1F7219AD6680070F17D /* Main.storyboard */ = {
+		3C792BC5219C347500C9B306 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3C18B1F8219AD6680070F17D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3C18B1FC219AD6690070F17D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C18B1FD219AD6690070F17D /* Base */,
+				3C792BC6219C347500C9B306 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +154,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3C18B200219AD6690070F17D /* Debug */ = {
+		3C792BC9219C347500C9B306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		3C18B201219AD6690070F17D /* Release */ = {
+		3C792BCA219C347500C9B306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,34 +270,36 @@
 			};
 			name = Release;
 		};
-		3C18B203219AD6690070F17D /* Debug */ = {
+		3C792BCC219C347500C9B306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = UIViewPractice/Info.plist;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
+				INFOPLIST_FILE = CreateCustomTabBarUseCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.Wi.Example.UIViewPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.Wi.Example.CreateCustomTabBarUseCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3C18B204219AD6690070F17D /* Release */ = {
+		3C792BCD219C347500C9B306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = UIViewPractice/Info.plist;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
+				INFOPLIST_FILE = CreateCustomTabBarUseCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.Wi.Example.UIViewPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.Wi.Example.CreateCustomTabBarUseCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C18B1EB219AD6680070F17D /* Build configuration list for PBXProject "UIViewPractice" */ = {
+		3C792BB4219C347400C9B306 /* Build configuration list for PBXProject "CreateCustomTabBarUseCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C18B200219AD6690070F17D /* Debug */,
-				3C18B201219AD6690070F17D /* Release */,
+				3C792BC9219C347500C9B306 /* Debug */,
+				3C792BCA219C347500C9B306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C18B202219AD6690070F17D /* Build configuration list for PBXNativeTarget "UIViewPractice" */ = {
+		3C792BCB219C347500C9B306 /* Build configuration list for PBXNativeTarget "CreateCustomTabBarUseCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C18B203219AD6690070F17D /* Debug */,
-				3C18B204219AD6690070F17D /* Release */,
+				3C792BCC219C347500C9B306 /* Debug */,
+				3C792BCD219C347500C9B306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3C18B1E8219AD6680070F17D /* Project object */;
+	rootObject = 3C792BB1219C347400C9B306 /* Project object */;
 }
