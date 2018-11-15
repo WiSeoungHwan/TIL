@@ -112,7 +112,7 @@ extension ViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CustomCell else {return}
 //        cell.label.textColor = .lightGray
-        cell.imageView.alpha = 0.2
+        cell.imageView.alpha = 0.5
     }
 }
 
