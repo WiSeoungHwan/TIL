@@ -42,8 +42,6 @@ func fetchGitHubRepositories() {
                 print(repository.description ?? "")
                 print(repository.starCount)
                 print("+++++++++++++++++++++")
-                
-            
             }
         } catch {
             print(error.localizedDescription)
