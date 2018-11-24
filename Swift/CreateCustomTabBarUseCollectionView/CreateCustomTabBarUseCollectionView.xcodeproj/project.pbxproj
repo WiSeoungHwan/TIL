@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C23374621A6BC7700BA86C3 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C23374521A6BC7700BA86C3 /* PageCollectionViewCell.swift */; };
+		3C23374821A6BE0D00BA86C3 /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C23374721A6BE0D00BA86C3 /* CustomMenuBar.swift */; };
 		3C792BBD219C347400C9B306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C792BBC219C347400C9B306 /* AppDelegate.swift */; };
 		3C792BBF219C347400C9B306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C792BBE219C347400C9B306 /* ViewController.swift */; };
 		3C792BC7219C347500C9B306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C792BC5219C347500C9B306 /* LaunchScreen.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C23374521A6BC7700BA86C3 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3C23374721A6BE0D00BA86C3 /* CustomMenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
 		3C792BB9219C347400C9B306 /* CreateCustomTabBarUseCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateCustomTabBarUseCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C792BBC219C347400C9B306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C792BBE219C347400C9B306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				3C792BBC219C347400C9B306 /* AppDelegate.swift */,
 				3C792BBE219C347400C9B306 /* ViewController.swift */,
 				3C792BD0219C3EAA00C9B306 /* CustomCell.swift */,
+				3C23374721A6BE0D00BA86C3 /* CustomMenuBar.swift */,
+				3C23374521A6BC7700BA86C3 /* PageCollectionViewCell.swift */,
 				3CD8DAA7219C58A0004DBA18 /* Assets.xcassets */,
 				3C792BC5219C347500C9B306 /* LaunchScreen.storyboard */,
 				3C792BC8219C347500C9B306 /* Info.plist */,
@@ -134,9 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C23374821A6BE0D00BA86C3 /* CustomMenuBar.swift in Sources */,
 				3C792BBF219C347400C9B306 /* ViewController.swift in Sources */,
 				3C792BBD219C347400C9B306 /* AppDelegate.swift in Sources */,
 				3C792BD1219C3EAA00C9B306 /* CustomCell.swift in Sources */,
+				3C23374621A6BC7700BA86C3 /* PageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

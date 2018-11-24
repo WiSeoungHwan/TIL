@@ -19,24 +19,24 @@ class CustomCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    var imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.alpha = 0.5
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
+//    var imageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.alpha = 0.5
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        return imageView
+//    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(imageView)
-        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.addSubview(label)
+        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.addSubview(imageView)
-        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.addSubview(label)
+        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
 }
 
