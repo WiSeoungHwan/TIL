@@ -14,7 +14,7 @@ class CustomCell: UICollectionViewCell {
         //라벨의 세부사항 지정
         label.text = "Tab"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         label.textColor = .lightGray // 선택되기 전에는 연한 회색
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
