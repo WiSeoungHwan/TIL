@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CustomName" representedClassName="CustomName" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tweeter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tweets" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="something" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tweets" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="CustomName" inverseName="tweeter" inverseEntity="CustomName" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CustomName" positionX="-120.375" positionY="-132.09765625" width="128" height="88"/>
+        <element name="User" positionX="-137.2734375" positionY="46.1328125" width="128" height="73"/>
+    </elements>
+</model>
