@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         createPageControl()
         createScrollView()
         scrollView.isPagingEnabled = true
+        scrollView.alwaysBounceHorizontal = true
         print(slides.count)
 //        slideNum = slides.count - 1
         setupSlides()
@@ -35,15 +36,11 @@ class ViewController: UIViewController {
     }
     
     private func setupSlides(){
-        
-        for i in 0 ... slides.endIndex{
-            if i == slides.endIndex {
-                slides[i].trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0)
-            }
-            slides[i].leadingAnchor.constraint(equalTo: slides[i].trailingAnchor , constant: 0).isActive = true
-            
-        }
-        
+        print(slides.endIndex)
+        scrollView.contentSize = CGSize(
+            width: UIScreen.main.bounds.width * CGFloat(slides.count),
+            height: UIScreen.main.bounds.height
+        )
     }
     private func createSlides(_ slideNumber: Int) -> [SlideView] {
         var slideArray: [SlideView] = []
@@ -101,7 +98,6 @@ class ViewController: UIViewController {
         scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         scrollView.backgroundColor = .gray
     }
     
