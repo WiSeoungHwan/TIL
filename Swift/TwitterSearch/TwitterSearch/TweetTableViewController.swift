@@ -10,7 +10,7 @@ import UIKit
 
 class TweetTableViewController: UITableViewController {
 
-    private var tweets = [[Tweets]]()
+    private var tweets = [[Tweet]]()
     
     var searchText: String?{
         didSet {
