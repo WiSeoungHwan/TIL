@@ -1,0 +1,6 @@
+framework module Pods_UdemyInstargramCopy {
+  umbrella header "Pods-UdemyInstargramCopy-umbrella.h"
+
+  export *
+  module * { export * }
+}

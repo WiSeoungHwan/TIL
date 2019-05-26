@@ -14,9 +14,21 @@
 		3C29002C228FE93A000AF935 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29002B228FE93A000AF935 /* LoginVC.swift */; };
 		3C29002F228FEAFD000AF935 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29002E228FEAFD000AF935 /* Extentions.swift */; };
 		3C290031228FFC28000AF935 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C290030228FFC28000AF935 /* SignUpVC.swift */; };
+		3C29003322912504000AF935 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C29003222912504000AF935 /* GoogleService-Info.plist */; };
+		3C3700E42296982D00E6BDFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3700E32296982D00E6BDFB /* Constants.swift */; };
+		3CF5FE0B2299097800622ABD /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE0A2299097800622ABD /* MainTabVC.swift */; };
+		3CF5FE0D22990C4500622ABD /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE0C22990C4500622ABD /* FeedVC.swift */; };
+		3CF5FE0F22990C7400622ABD /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE0E22990C7400622ABD /* SearchVC.swift */; };
+		3CF5FE1122990C9100622ABD /* UploadPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1022990C9100622ABD /* UploadPostVC.swift */; };
+		3CF5FE1322990CB100622ABD /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1222990CB100622ABD /* NotificationVC.swift */; };
+		3CF5FE1522990CD700622ABD /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1422990CD700622ABD /* UserProfileVC.swift */; };
+		3CF5FE1D2299382B00622ABD /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1C2299382B00622ABD /* UserProfileHeader.swift */; };
+		3CF5FE1F229A5DCE00622ABD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1E229A5DCE00622ABD /* User.swift */; };
+		D167F2F56A46051106EE32E0 /* Pods_UdemyInstargramCopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCB12156C39AD34B1BD1605 /* Pods_UdemyInstargramCopy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A92F21C4D07276E81841FFC /* Pods-UdemyInstargramCopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstargramCopy.release.xcconfig"; path = "Target Support Files/Pods-UdemyInstargramCopy/Pods-UdemyInstargramCopy.release.xcconfig"; sourceTree = "<group>"; };
 		3C290013228FE6ED000AF935 /* UdemyInstargramCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyInstargramCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C290016228FE6ED000AF935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C29001B228FE6ED000AF935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +38,18 @@
 		3C29002B228FE93A000AF935 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3C29002E228FEAFD000AF935 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		3C290030228FFC28000AF935 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3C29003222912504000AF935 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C3700E32296982D00E6BDFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3CF5FE0A2299097800622ABD /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
+		3CF5FE0C22990C4500622ABD /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		3CF5FE0E22990C7400622ABD /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		3CF5FE1022990C9100622ABD /* UploadPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostVC.swift; sourceTree = "<group>"; };
+		3CF5FE1222990CB100622ABD /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		3CF5FE1422990CD700622ABD /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		3CF5FE1C2299382B00622ABD /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		3CF5FE1E229A5DCE00622ABD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3FCB12156C39AD34B1BD1605 /* Pods_UdemyInstargramCopy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdemyInstargramCopy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E7898D033724FB610F42DD /* Pods-UdemyInstargramCopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstargramCopy.debug.xcconfig"; path = "Target Support Files/Pods-UdemyInstargramCopy/Pods-UdemyInstargramCopy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D167F2F56A46051106EE32E0 /* Pods_UdemyInstargramCopy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +69,8 @@
 			children = (
 				3C290015228FE6ED000AF935 /* UdemyInstargramCopy */,
 				3C290014228FE6ED000AF935 /* Products */,
+				FC7897847A2E978CBC5BBF2F /* Pods */,
+				D78EA3AAB9469D7AD49A2FFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +92,7 @@
 				3C290016228FE6ED000AF935 /* AppDelegate.swift */,
 				3C29001A228FE6ED000AF935 /* Main.storyboard */,
 				3C29001D228FE6ED000AF935 /* Assets.xcassets */,
+				3C29003222912504000AF935 /* GoogleService-Info.plist */,
 				3C29001F228FE6ED000AF935 /* LaunchScreen.storyboard */,
 				3C290022228FE6ED000AF935 /* Info.plist */,
 			);
@@ -74,6 +102,7 @@
 		3C290028228FE8B1000AF935 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3CF5FE1E229A5DCE00622ABD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,6 +110,7 @@
 		3C290029228FE8CA000AF935 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3CF5FE1C2299382B00622ABD /* UserProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,8 +118,13 @@
 		3C29002A228FE8D5000AF935 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3C29002B228FE93A000AF935 /* LoginVC.swift */,
-				3C290030228FFC28000AF935 /* SignUpVC.swift */,
+				3CF5FE16229931D500622ABD /* Login */,
+				3CF5FE17229931F300622ABD /* Feed */,
+				3CF5FE182299320600622ABD /* Search */,
+				3CF5FE192299320E00622ABD /* UploadPost */,
+				3CF5FE1A2299321700622ABD /* Notification */,
+				3CF5FE1B2299321F00622ABD /* UserProfile */,
+				3CF5FE0A2299097800622ABD /* MainTabVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,8 +133,75 @@
 			isa = PBXGroup;
 			children = (
 				3C29002E228FEAFD000AF935 /* Extentions.swift */,
+				3C3700E32296982D00E6BDFB /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3CF5FE16229931D500622ABD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3C29002B228FE93A000AF935 /* LoginVC.swift */,
+				3C290030228FFC28000AF935 /* SignUpVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3CF5FE17229931F300622ABD /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5FE0C22990C4500622ABD /* FeedVC.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		3CF5FE182299320600622ABD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5FE0E22990C7400622ABD /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3CF5FE192299320E00622ABD /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5FE1022990C9100622ABD /* UploadPostVC.swift */,
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		3CF5FE1A2299321700622ABD /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5FE1222990CB100622ABD /* NotificationVC.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3CF5FE1B2299321F00622ABD /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5FE1422990CD700622ABD /* UserProfileVC.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		D78EA3AAB9469D7AD49A2FFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FCB12156C39AD34B1BD1605 /* Pods_UdemyInstargramCopy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC7897847A2E978CBC5BBF2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55E7898D033724FB610F42DD /* Pods-UdemyInstargramCopy.debug.xcconfig */,
+				2A92F21C4D07276E81841FFC /* Pods-UdemyInstargramCopy.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C290025228FE6ED000AF935 /* Build configuration list for PBXNativeTarget "UdemyInstargramCopy" */;
 			buildPhases = (
+				757E8F3C16971154D66136C2 /* [CP] Check Pods Manifest.lock */,
 				3C29000F228FE6ED000AF935 /* Sources */,
 				3C290010228FE6ED000AF935 /* Frameworks */,
 				3C290011228FE6ED000AF935 /* Resources */,
+				F6D65F6DC6A4E2E2B66C6A61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,16 +267,83 @@
 				3C290021228FE6ED000AF935 /* LaunchScreen.storyboard in Resources */,
 				3C29001E228FE6ED000AF935 /* Assets.xcassets in Resources */,
 				3C29001C228FE6ED000AF935 /* Main.storyboard in Resources */,
+				3C29003322912504000AF935 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		757E8F3C16971154D66136C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UdemyInstargramCopy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D65F6DC6A4E2E2B66C6A61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UdemyInstargramCopy/Pods-UdemyInstargramCopy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActiveLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UdemyInstargramCopy/Pods-UdemyInstargramCopy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C29000F228FE6ED000AF935 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF5FE1F229A5DCE00622ABD /* User.swift in Sources */,
+				3CF5FE1122990C9100622ABD /* UploadPostVC.swift in Sources */,
+				3CF5FE1322990CB100622ABD /* NotificationVC.swift in Sources */,
+				3CF5FE0F22990C7400622ABD /* SearchVC.swift in Sources */,
+				3CF5FE1D2299382B00622ABD /* UserProfileHeader.swift in Sources */,
+				3CF5FE1522990CD700622ABD /* UserProfileVC.swift in Sources */,
+				3C3700E42296982D00E6BDFB /* Constants.swift in Sources */,
+				3CF5FE0D22990C4500622ABD /* FeedVC.swift in Sources */,
+				3CF5FE0B2299097800622ABD /* MainTabVC.swift in Sources */,
 				3C290031228FFC28000AF935 /* SignUpVC.swift in Sources */,
 				3C29002C228FE93A000AF935 /* LoginVC.swift in Sources */,
 				3C290017228FE6ED000AF935 /* AppDelegate.swift in Sources */,
@@ -320,6 +491,7 @@
 		};
 		3C290026228FE6ED000AF935 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55E7898D033724FB610F42DD /* Pods-UdemyInstargramCopy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +510,7 @@
 		};
 		3C290027228FE6ED000AF935 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A92F21C4D07276E81841FFC /* Pods-UdemyInstargramCopy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
