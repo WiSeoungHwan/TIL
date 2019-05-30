@@ -24,6 +24,8 @@
 		3CF5FE1522990CD700622ABD /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1422990CD700622ABD /* UserProfileVC.swift */; };
 		3CF5FE1D2299382B00622ABD /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1C2299382B00622ABD /* UserProfileHeader.swift */; };
 		3CF5FE1F229A5DCE00622ABD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE1E229A5DCE00622ABD /* User.swift */; };
+		3CF5FE21229A756300622ABD /* SearchUesrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE20229A756300622ABD /* SearchUesrCell.swift */; };
+		3CF5FE33229FF3A200622ABD /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5FE32229FF3A200622ABD /* Protocols.swift */; };
 		D167F2F56A46051106EE32E0 /* Pods_UdemyInstargramCopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCB12156C39AD34B1BD1605 /* Pods_UdemyInstargramCopy.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		3CF5FE1422990CD700622ABD /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		3CF5FE1C2299382B00622ABD /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		3CF5FE1E229A5DCE00622ABD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3CF5FE20229A756300622ABD /* SearchUesrCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUesrCell.swift; sourceTree = "<group>"; };
+		3CF5FE32229FF3A200622ABD /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		3FCB12156C39AD34B1BD1605 /* Pods_UdemyInstargramCopy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdemyInstargramCopy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E7898D033724FB610F42DD /* Pods-UdemyInstargramCopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstargramCopy.debug.xcconfig"; path = "Target Support Files/Pods-UdemyInstargramCopy/Pods-UdemyInstargramCopy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				3CF5FE1C2299382B00622ABD /* UserProfileHeader.swift */,
+				3CF5FE20229A756300622ABD /* SearchUesrCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			children = (
 				3C29002E228FEAFD000AF935 /* Extentions.swift */,
 				3C3700E32296982D00E6BDFB /* Constants.swift */,
+				3CF5FE32229FF3A200622ABD /* Protocols.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF5FE33229FF3A200622ABD /* Protocols.swift in Sources */,
 				3CF5FE1F229A5DCE00622ABD /* User.swift in Sources */,
 				3CF5FE1122990C9100622ABD /* UploadPostVC.swift in Sources */,
 				3CF5FE1322990CB100622ABD /* NotificationVC.swift in Sources */,
@@ -347,6 +354,7 @@
 				3C290031228FFC28000AF935 /* SignUpVC.swift in Sources */,
 				3C29002C228FE93A000AF935 /* LoginVC.swift in Sources */,
 				3C290017228FE6ED000AF935 /* AppDelegate.swift in Sources */,
+				3CF5FE21229A756300622ABD /* SearchUesrCell.swift in Sources */,
 				3C29002F228FEAFD000AF935 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

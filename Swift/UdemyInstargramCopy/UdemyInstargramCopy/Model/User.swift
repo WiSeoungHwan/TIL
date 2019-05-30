@@ -6,6 +6,8 @@
 //  Copyright © 2019 Wi. All rights reserved.
 //
 
+import Firebase
+
 class User {
     
     // attributes
@@ -13,6 +15,7 @@ class User {
     var name: String!
     var profileImageUrl: String!
     var uid: String!
+    var isFollowed = false
     
     init(uid: String, dictionary: Dictionary<String, AnyObject>) {
         self.uid = uid
@@ -28,6 +31,53 @@ class User {
         if let profileImageUrl = dictionary["profileImageUrl"] as? String{
             self.profileImageUrl = profileImageUrl
         }
+    }
+    
+    func follow(){
+        
+        guard let currentUid = Auth.auth().currentUser?.uid else {return}
+
+        // set is followed to true
+        self.isFollowed = true
+        
+        // remove user from current user-following structure
+        USER_FOLLOWING_REF.child(currentUid).updateChildValues([self.uid: 1])
+        
+        // remove current user from user-follower structure
+        USER_FOLLOWER_REF.child(self.uid).updateChildValues([currentUid: 1])
+    }
+    
+    func unfollow(){
+        
+        guard let currentUid = Auth.auth().currentUser?.uid else {return}
+        
+        // set is followed to false
+        self.isFollowed = false
+        
+        // remove user from current user-following structure
+        USER_FOLLOWING_REF.child(currentUid).child(self.uid).removeValue()
+        
+        // remove current user from user-follower structure
+        USER_FOLLOWER_REF.child(self.uid).child(currentUid).removeValue()
+    }
+    
+    func checkIfUserIsFollowed(completion: @escaping (Bool) -> ()){
+        
+        guard let currentUid = Auth.auth().currentUser?.uid else {return}
+        
+        USER_FOLLOWING_REF.child(currentUid).observeSingleEvent(of: .value) { (snapshot) in
+            
+            if snapshot.hasChild(self.uid){
+                
+                self.isFollowed = true
+                completion(true)
+            } else {
+                
+                self.isFollowed = false
+                completion(false)
+            }
+        }
+        
     }
 }
 
