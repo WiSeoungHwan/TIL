@@ -12,6 +12,7 @@
 		3C3700F72296A4E400E6BDFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3700F52296A4E400E6BDFB /* Main.storyboard */; };
 		3C3700F92296A4E600E6BDFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3700F82296A4E600E6BDFB /* Assets.xcassets */; };
 		3C3700FC2296A4E600E6BDFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3700FA2296A4E600E6BDFB /* LaunchScreen.storyboard */; };
+		3C3701042296ABCA00E6BDFB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3701032296ABCA00E6BDFB /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3C3700F82296A4E600E6BDFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C3700FB2296A4E600E6BDFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C3700FD2296A4E600E6BDFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C3701032296ABCA00E6BDFB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				3C3700F12296A4E400E6BDFB /* AppDelegate.swift */,
 				3C3700F32296A4E400E6BDFB /* ViewController.swift */,
+				3C3701032296ABCA00E6BDFB /* SplashViewController.swift */,
 				3C3700F52296A4E400E6BDFB /* Main.storyboard */,
 				3C3700F82296A4E600E6BDFB /* Assets.xcassets */,
 				3C3700FA2296A4E600E6BDFB /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3701042296ABCA00E6BDFB /* SplashViewController.swift in Sources */,
 				3C3700F42296A4E400E6BDFB /* ViewController.swift in Sources */,
 				3C3700F22296A4E400E6BDFB /* AppDelegate.swift in Sources */,
 			);
@@ -282,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGQ7D6RJAU;
 				INFOPLIST_FILE = LaunchScreenExample/Info.plist;
@@ -300,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGQ7D6RJAU;
 				INFOPLIST_FILE = LaunchScreenExample/Info.plist;

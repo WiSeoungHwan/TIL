@@ -37,28 +37,45 @@ class User {
         
         guard let currentUid = Auth.auth().currentUser?.uid else {return}
 
+        // UPDATE: - get uid like this to work with update
+        guard let uid = uid else { return }
+        
         // set is followed to true
         self.isFollowed = true
         
-        // remove user from current user-following structure
-        USER_FOLLOWING_REF.child(currentUid).updateChildValues([self.uid: 1])
+        // add followed user to current user-following structure
+        USER_FOLLOWING_REF.child(currentUid).updateChildValues([uid: 1])
         
-        // remove current user from user-follower structure
-        USER_FOLLOWER_REF.child(self.uid).updateChildValues([currentUid: 1])
+        // add current user to followed user-follower structure
+        USER_FOLLOWER_REF.child(uid).updateChildValues([currentUid: 1])
+        
+        // upload follow notification to server
+//        uploadFollowNotificationToServer()
+        
+        // add followed users posts to current user-feed
+        USER_POSTS_REF.child(uid).observe(.childAdded) { (snapshot) in
+            let postId = snapshot.key
+            USER_FEED_REF.child(currentUid).updateChildValues([postId: 1])
+        }
     }
     
     func unfollow(){
         
         guard let currentUid = Auth.auth().currentUser?.uid else {return}
         
-        // set is followed to false
+        // UPDATE: - get uid like this to work with update
+        guard let uid = uid else { return }
+        
         self.isFollowed = false
         
-        // remove user from current user-following structure
-        USER_FOLLOWING_REF.child(currentUid).child(self.uid).removeValue()
+        USER_FOLLOWING_REF.child(currentUid).child(uid).removeValue()
         
-        // remove current user from user-follower structure
-        USER_FOLLOWER_REF.child(self.uid).child(currentUid).removeValue()
+        USER_FOLLOWER_REF.child(uid).child(currentUid).removeValue()
+        
+        USER_POSTS_REF.child(uid).observe(.childAdded) { (snapshot) in
+            let postId = snapshot.key
+            USER_FEED_REF.child(currentUid).child(postId).removeValue()
+        }
     }
     
     func checkIfUserIsFollowed(completion: @escaping (Bool) -> ()){
@@ -68,11 +85,9 @@ class User {
         USER_FOLLOWING_REF.child(currentUid).observeSingleEvent(of: .value) { (snapshot) in
             
             if snapshot.hasChild(self.uid){
-                
                 self.isFollowed = true
                 completion(true)
             } else {
-                
                 self.isFollowed = false
                 completion(false)
             }
