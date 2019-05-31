@@ -13,9 +13,10 @@ class UserProfileHeader: UICollectionViewCell {
     
     // MARK: - Properties
     
+    var delegate: UserProfileHeaderDelegate?
+    
     var user: User?{
         didSet{
-            
             
             // configure edit profile button
             configureEditProfileFollowButton()
@@ -71,7 +72,7 @@ class UserProfileHeader: UICollectionViewCell {
         
         let attributedText = NSMutableAttributedString(string: "5\n", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)])
         attributedText.append(NSAttributedString(string: "following", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
-                                                                               NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
         label.attributedText = attributedText
         return label
     }()
@@ -109,22 +110,24 @@ class UserProfileHeader: UICollectionViewCell {
     }()
     
     // MARK: - Handler
-    
+
     @objc func handleEditProfileFollow(){
-        guard let user = self.user else {return}
-        
-        if editProfileFollowButton.titleLabel?.text == "Edit Profile"{
-            print("Handle edit profile")
-        } else{
-            
-            if editProfileFollowButton.titleLabel?.text == "Follow" {
-                editProfileFollowButton.setTitle("Following", for: .normal)
-                user.follow()
-            } else {
-                editProfileFollowButton.setTitle("Follow", for: .normal)
-                user.unfollow()
-            }
-        }
+        print("handle")
+        delegate?.handleEditFollowTapped(for: self)
+//        guard let user = self.user else {return}
+//
+//        if editProfileFollowButton.titleLabel?.text == "Edit Profile"{
+//            print("Handle edit profile")
+//        } else{
+//
+//            if editProfileFollowButton.titleLabel?.text == "Follow" {
+//                editProfileFollowButton.setTitle("Following", for: .normal)
+//                user.follow()
+//            } else {
+//                editProfileFollowButton.setTitle("Follow", for: .normal)
+//                user.unfollow()
+//            }
+//        }
     }
     
     func configureBottomToolBar(){

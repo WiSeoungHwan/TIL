@@ -11,5 +11,5 @@ import Foundation
 
 protocol UserProfileHeaderDelegate {
     
-    func handleEditFollowTapped
+    func handleEditFollowTapped(for header: UserProfileHeader)
 }
