@@ -1,29 +1,16 @@
 //
-//  SearchUesrCell.swift
+//  FollowCell.swift
 //  UdemyInstargramCopy
 //
-//  Created by Wi on 26/05/2019.
+//  Created by Wi on 01/06/2019.
 //  Copyright © 2019 Wi. All rights reserved.
 //
 
 import UIKit
 
-class SearchUesrCell: UITableViewCell {
-
-    // MARK: - Properties
+class FollowCell: UITableViewCell {
     
-    var user: User? {
-        didSet{
-            guard let profileImageUrl = user?.profileImageUrl else { return}
-            guard let username = user?.username else {return}
-            guard let fullName = user?.name else {return}
-            
-            profileImageView.loadImage(with: profileImageUrl)
-            
-            self.textLabel?.text = username
-            self.detailTextLabel?.text = fullName
-        }
-    }
+    // MARK: - Properties
     
     let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -33,18 +20,37 @@ class SearchUesrCell: UITableViewCell {
         return iv
     }()
     
+    lazy var followButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Loading", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(red: 17/255, green: 154/255, blue: 237/255, alpha: 1)
+        button.addTarget(self, action: #selector(handleFollowTapped), for: .touchUpInside)
+        return button
+    }()
     
+    // MARK: - Handlers
+    
+    @objc func handleFollowTapped(){
+        print("Handle follow here..")
+    }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
-        // add profile image view
         addSubview(profileImageView)
         profileImageView.anchor(top: nil, left: leadingAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 48, height: 48)
         profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         profileImageView.layer.cornerRadius = 48 / 2
         
-        self.textLabel?.text = "Username"
-        self.detailTextLabel?.text = "Full name"
+        addSubview(followButton)
+        followButton.anchor(top: nil, left: nil, bottom: nil, right: trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 12, width: 90, height: 30)
+        followButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        followButton.layer.cornerRadius = 3
+        
+        textLabel?.text = "Username"
+        
+        detailTextLabel?.text = "Full name"
     }
     
     override func layoutSubviews() {
@@ -62,4 +68,6 @@ class SearchUesrCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+
 }

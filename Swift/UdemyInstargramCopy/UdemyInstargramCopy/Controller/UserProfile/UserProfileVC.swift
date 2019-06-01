@@ -79,6 +79,19 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
     }
     
     // MARK: - UserProfileHeader Protocol
+    
+    func handleFollowersTapped(for header: UserProfileHeader) {
+        let followVC = FollowVC()
+        followVC.viewFollowers = true
+        navigationController?.pushViewController(followVC, animated: true)
+    }
+    
+    func handleFollowingTapped(for header: UserProfileHeader) {
+        let followVC = FollowVC()
+        followVC.viewFollowing = true
+        navigationController?.pushViewController(followVC, animated: true)
+    }
+    
     func handleEditFollowTapped(for header: UserProfileHeader) {
         guard let user = header.user else {return}
         
@@ -120,7 +133,7 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         
         // get number of following
-        USER_FOLLOWING_REF.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+        USER_FOLLOWING_REF.child(uid).observe(.value) { (snapshot) in
             if let snapshot = snapshot.value as? Dictionary<String, AnyObject>{
                 numberOfFollowing = snapshot.count
             } else {
