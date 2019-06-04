@@ -123,7 +123,6 @@ class SelectImageVC: UICollectionViewController, UICollectionViewDelegateFlowLay
     func configureNavigationButtons(){
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(handleNext))
     }
     
