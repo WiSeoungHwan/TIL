@@ -4,6 +4,7 @@
 
 * 사진 앱이 관리하는 이미지, 비디오를 관리하는 애플의 기본 프레임워크 
 
+
 ## PhotoKit  으로 할 수 있는 것들 
 
 * 이미지 및 비디오 내용 편집 
@@ -31,7 +32,7 @@
 * asset objects are immutable  이 객체는 변경할 수 없습니다. 변경하기 위해선  PHAssetChangeRequest 객체를 생성하고 변경 요청을 보내야합니다.
 ### PHCollection
 
-* asset colletion 을 위한 추상 슈퍼클래스.
+* asset collection 을 위한 추상 슈퍼클래스.
 * 사진, 비디오 집합을 위한 부모 클래스라고 볼 수 있습니다.
 * 인스턴스를 직접 만들거나 이 인스턴스로 작업하면 안됩니다.
 * 하위클래스인 PHAssetCollection 이나 PHCollectionList 를 통해 작업해야합니다.
@@ -45,7 +46,7 @@
 ### PHCollectionList
 
 * asset collection의 모음 
-* colletio list 안의 객체를 검색하려면 fetchCollections(in: options:) 와 같은 클래스 메소드를 사용합니다.
+* collection list 안의 객체를 검색하려면 fetchCollections(in: options:) 와 같은 클래스 메소드를 사용합니다.
 * 사용자의 명시적인 승인이 필요합니다.
 
 
