@@ -10,6 +10,8 @@
 		3C1D982022A2BCE300647640 /* SelectImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D981F22A2BCE300647640 /* SelectImageVC.swift */; };
 		3C1D982222A2BE0C00647640 /* SelectPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D982122A2BE0C00647640 /* SelectPhotoCell.swift */; };
 		3C1D982422A2BE3F00647640 /* SelectPhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D982322A2BE3F00647640 /* SelectPhotoHeader.swift */; };
+		3C2605FA22ACE65B00E9614C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2605F922ACE65B00E9614C /* Post.swift */; };
+		3C2605FC22ACEB9100E9614C /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2605FB22ACEB9100E9614C /* UserPostCell.swift */; };
 		3C290017228FE6ED000AF935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C290016228FE6ED000AF935 /* AppDelegate.swift */; };
 		3C29001C228FE6ED000AF935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C29001A228FE6ED000AF935 /* Main.storyboard */; };
 		3C29001E228FE6ED000AF935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C29001D228FE6ED000AF935 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		3C1D981F22A2BCE300647640 /* SelectImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageVC.swift; sourceTree = "<group>"; };
 		3C1D982122A2BE0C00647640 /* SelectPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoCell.swift; sourceTree = "<group>"; };
 		3C1D982322A2BE3F00647640 /* SelectPhotoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoHeader.swift; sourceTree = "<group>"; };
+		3C2605F922ACE65B00E9614C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3C2605FB22ACEB9100E9614C /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
 		3C290013228FE6ED000AF935 /* UdemyInstargramCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyInstargramCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C290016228FE6ED000AF935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C29001B228FE6ED000AF935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3CF5FE1E229A5DCE00622ABD /* User.swift */,
+				3C2605F922ACE65B00E9614C /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				3CB70BAA22A1817E005DAC44 /* FollowCell.swift */,
 				3C1D982122A2BE0C00647640 /* SelectPhotoCell.swift */,
 				3C1D982322A2BE3F00647640 /* SelectPhotoHeader.swift */,
+				3C2605FB22ACEB9100E9614C /* UserPostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 				3CB70BA922A180D6005DAC44 /* FollowVC.swift in Sources */,
 				3C1D982222A2BE0C00647640 /* SelectPhotoCell.swift in Sources */,
 				3CF5FE1D2299382B00622ABD /* UserProfileHeader.swift in Sources */,
+				3C2605FC22ACEB9100E9614C /* UserPostCell.swift in Sources */,
 				3CF5FE1522990CD700622ABD /* UserProfileVC.swift in Sources */,
 				3C3700E42296982D00E6BDFB /* Constants.swift in Sources */,
+				3C2605FA22ACE65B00E9614C /* Post.swift in Sources */,
 				3CF5FE0D22990C4500622ABD /* FeedVC.swift in Sources */,
 				3CB70BAB22A1817E005DAC44 /* FollowCell.swift in Sources */,
 				3CF5FE0B2299097800622ABD /* MainTabVC.swift in Sources */,

@@ -17,7 +17,7 @@ class UserProfileHeader: UICollectionViewCell {
     
     var user: User?{
         didSet{
-            print("didset")
+            
             // configure edit profile button
             configureEditProfileFollowButton()
             

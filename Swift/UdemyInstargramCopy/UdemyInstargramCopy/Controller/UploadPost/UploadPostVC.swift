@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
-class UploadPostVC: UIViewController {
+class UploadPostVC: UIViewController, UITextViewDelegate {
     
     // MARK: - Properties
     
@@ -35,6 +36,8 @@ class UploadPostVC: UIViewController {
         button.setTitle("Share", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 5
+        button.isEnabled = false
+        button.addTarget(self, action: #selector(handleSharePost), for: .touchUpInside)
         return button
     }()
 
@@ -47,6 +50,98 @@ class UploadPostVC: UIViewController {
         // load image
         loadImage()
         
+        // text view delegate
+        captionTextView.delegate = self
+        
+    }
+    
+    // MARK: - UITextView
+    
+    func textViewDidChange(_ textView: UITextView) {
+        guard !textView.text.isEmpty else {
+            shareButton.isEnabled = false
+            shareButton.backgroundColor = UIColor(red: 149/255, green: 204/255, blue: 244/255, alpha: 1)
+            return
+        }
+        
+        shareButton.isEnabled = true
+        shareButton.backgroundColor = UIColor(red: 17/255, green: 154/255, blue: 237/255, alpha: 1)
+        
+        
+    }
+    
+    // MARK: Handler
+    
+    @objc func handleSharePost(){
+        
+        // parameters
+        
+        guard
+            let caption = captionTextView.text,
+            let postImg = photoImageView.image,
+            let currentUid = Auth.auth().currentUser?.uid else {return}
+        
+        // image upload data
+        guard let uploadData = postImg.jpegData(compressionQuality: 0.5) else {return}
+        
+        // creation date
+        let creationDate = Int(NSDate().timeIntervalSince1970)
+        
+        let filename = NSUUID().uuidString
+        // storage ref
+        let storageRef = STORAGE_POST_IMAGES_REF.child(filename)
+        
+        storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+            
+            // handle error
+            if let error = error {
+                print("Failed to upload image to storage with error", error.localizedDescription)
+                return
+            }
+            
+            storageRef.downloadURL(completion: { (url, error) in
+                guard let imageUrl = url?.absoluteString else {return}
+                
+                // post data
+                
+                let values = ["caption": caption,
+                              "creationDate": creationDate,
+                              "likes": 0,
+                              "imageUrl": imageUrl,
+                              "ownerUid": currentUid] as [String: Any]
+                
+                // post id
+                let postId = POSTS_REF.childByAutoId()
+                guard let postKey = postId.key else {return}
+                
+                // upload user-post structure
+                postId.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                    
+                    // update user-post structure
+                    let userPostsRef = USER_POSTS_REF.child(currentUid)
+                    userPostsRef.updateChildValues([postKey: 1])
+//
+//                    // update user-feed structure
+//                    self.updateUserFeeds(with: postKey)
+//
+//                    // upload hashtag to server
+//                    if caption.contains("#") {
+//                        self.uploadHashtagToServer(withPostId: postKey)
+//                    }
+//
+//                    // upload mention notification to server
+//                    if caption.contains("@") {
+//                        self.uploadMentionNotification(forPostId: postKey, withText: caption, isForComment: false)
+//                    }
+                    
+                    // return to home feed
+                    self.dismiss(animated: true, completion: {
+                        self.tabBarController?.selectedIndex = 0
+                    })
+                })
+                
+            })
+        }
         
     }
     
