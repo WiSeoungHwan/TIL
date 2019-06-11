@@ -69,6 +69,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        print(Auth.auth().currentUser)
     }
     
     func configure(){

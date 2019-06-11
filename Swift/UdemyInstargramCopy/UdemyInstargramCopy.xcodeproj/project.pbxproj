@@ -12,6 +12,7 @@
 		3C1D982422A2BE3F00647640 /* SelectPhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D982322A2BE3F00647640 /* SelectPhotoHeader.swift */; };
 		3C2605FA22ACE65B00E9614C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2605F922ACE65B00E9614C /* Post.swift */; };
 		3C2605FC22ACEB9100E9614C /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2605FB22ACEB9100E9614C /* UserPostCell.swift */; };
+		3C2605FE22ACF81300E9614C /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2605FD22ACF81300E9614C /* CustomImageView.swift */; };
 		3C290017228FE6ED000AF935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C290016228FE6ED000AF935 /* AppDelegate.swift */; };
 		3C29001C228FE6ED000AF935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C29001A228FE6ED000AF935 /* Main.storyboard */; };
 		3C29001E228FE6ED000AF935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C29001D228FE6ED000AF935 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		3C1D982322A2BE3F00647640 /* SelectPhotoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoHeader.swift; sourceTree = "<group>"; };
 		3C2605F922ACE65B00E9614C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3C2605FB22ACEB9100E9614C /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
+		3C2605FD22ACF81300E9614C /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		3C290013228FE6ED000AF935 /* UdemyInstargramCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyInstargramCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C290016228FE6ED000AF935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C29001B228FE6ED000AF935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				3C29002E228FEAFD000AF935 /* Extentions.swift */,
 				3C3700E32296982D00E6BDFB /* Constants.swift */,
 				3CF5FE32229FF3A200622ABD /* Protocols.swift */,
+				3C2605FD22ACF81300E9614C /* CustomImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			files = (
 				3C1D982022A2BCE300647640 /* SelectImageVC.swift in Sources */,
 				3C1D982422A2BE3F00647640 /* SelectPhotoHeader.swift in Sources */,
+				3C2605FE22ACF81300E9614C /* CustomImageView.swift in Sources */,
 				3CF5FE33229FF3A200622ABD /* Protocols.swift in Sources */,
 				3CF5FE1F229A5DCE00622ABD /* User.swift in Sources */,
 				3CF5FE1122990C9100622ABD /* UploadPostVC.swift in Sources */,
