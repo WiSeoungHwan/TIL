@@ -18,12 +18,12 @@ class SearchVC: UITableViewController {
     var tracks = [Track]()
     var currentTrack: Track? {
         didSet {
-            print(currentTrack)
+        
         }
     }
     
-    var player: AVPlayer!
-    
+    var player: AVPlayer?
+    var searchWord: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +48,9 @@ class SearchVC: UITableViewController {
     private func searchControllerConfigure(){
         self.navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        searchController.delegate = self
         searchController.searchBar.placeholder = "Search music"
-        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = true
     }
     
     // MARK: - TableView
@@ -60,7 +61,9 @@ class SearchVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrackCell
-        cell.track = tracks[indexPath.row]
+        if tracks.count > indexPath.row {
+            cell.track = tracks[indexPath.row]
+        }
         return cell
     }
     
@@ -70,11 +73,11 @@ class SearchVC: UITableViewController {
         guard let footerView = tableView.footerView(forSection: 0) as? CurrentPlayMusicFooterView else {return}
         
         currentTrack = tracks[indexPath.row]
-        footerView.track = tracks[indexPath.row]
+        footerView.track = currentTrack
         footerView.isPlaying = true
         
         player = AVPlayer(url: url)
-        player.play()
+        player!.play()
        
     }
     
@@ -123,25 +126,35 @@ class SearchVC: UITableViewController {
 
 extension SearchVC: CurrentPlayMusicFooterViewDelegate{
     func playPauseButtonDidTap(footerView: CurrentPlayMusicFooterView) {
+        guard let player = self.player else {return}
+        
         if footerView.isPlaying{
             player.pause()
         } else {
             player.play()
         }
         footerView.isPlaying.toggle()
-        
     }
-    
-    
 }
 
 
 extension SearchVC: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
-        getSearchData(searchTerm: searchBar.text!)
+        if searchWord != nil{
+            getSearchData(searchTerm: searchWord!)
+        } else {
+            getSearchData(searchTerm: searchBar.text!)
+        }
+        
     }
     
     
+}
+
+extension SearchVC: UISearchControllerDelegate{
+    func willDismissSearchController(_ searchController: UISearchController) {
+        searchWord = searchController.searchBar.text
+    }
 }
 

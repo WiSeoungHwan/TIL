@@ -13,8 +13,8 @@ var imageCache = [String: UIImage]()
 
 class CustomImageView: UIImageView{
     
-    var lastImgUrlUsedToLoadImage: String?
-    
+//    var lastImgUrlUsedToLoadImage: String?
+
     func loadImage(with urlString: String){
         
         // set image to nil
@@ -22,7 +22,7 @@ class CustomImageView: UIImageView{
         self.image = nil
         
         // set lastImgUrlUsedToLoadImage
-        lastImgUrlUsedToLoadImage = urlString
+//        lastImgUrlUsedToLoadImage = urlString
         
         // check if image exists in cache
         if let cachedImage = imageCache[urlString]{
@@ -44,9 +44,9 @@ class CustomImageView: UIImageView{
                 print("Failed to load image wiht error", error.localizedDescription)
             }
             
-            if self.lastImgUrlUsedToLoadImage != url.absoluteString{
-                return
-            }
+//            if self.lastImgUrlUsedToLoadImage != url.absoluteString{
+//                return
+//            }
             
             // image data
             
