@@ -83,7 +83,6 @@ class SearchVC: UITableViewController {
         Database.database().reference().child("users").observe(.childAdded) { (snapshot) in
             // uid
             let uid = snapshot.key
-            
             Database.fetchUser(with: uid, completion: { (user) in
                 self.users.append(user)
                 
