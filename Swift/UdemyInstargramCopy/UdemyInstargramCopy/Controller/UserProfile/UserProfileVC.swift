@@ -180,12 +180,7 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
             
             let postId = snapshot.key
             
-            POSTS_REF.child(postId).observeSingleEvent(of: .value, with: { (snapshot) in
-                
-                guard let dictionary = snapshot.value as? Dictionary<String, AnyObject> else {return}
-                
-                let post = Post(postId: postId, dictionary: dictionary)
-                
+            Database.fetchPost(with: postId, completion: { (post) in
                 self.posts.append(post)
                 
                 self.posts.sort(by: { (post1, post2) -> Bool in
@@ -193,8 +188,6 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
                 })
                 
                 self.collectionView.reloadData()
-                
-                
             })
         }
     }
