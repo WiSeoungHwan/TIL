@@ -12,7 +12,10 @@ import Firebase
 private let reuseIdentifier = "Cell"
 
 class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
     // MARK: - Properties
+    
+    var posts = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,10 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         self.collectionView!.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // configure logout btn
-        
         configureNavBar()
+        
+        // fetch posts
+        fetchPosts()
     }
 
     // MARK: - UIColectionViewFlowLayout
@@ -44,16 +49,17 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-    
+        cell.post = posts[indexPath.row]
         return cell
     }
     
     // MARK: - Handlers
+    
     @objc func handleShowMessages(){
         print("send button tap")
     }
@@ -96,6 +102,29 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         
         
         
+    }
+    
+    // MARK: - API
+    
+    func fetchPosts(){
+        
+        POSTS_REF.observe(.childAdded) { (snapshot) in
+            
+            let postId = snapshot.key
+            
+            guard let dictionary = snapshot.value as? Dictionary<String, AnyObject> else {return}
+            
+            let post = Post(postId: postId, dictionary: dictionary)
+            
+            self.posts.append(post)
+            
+            self.posts.sort(by: { (post1, post2) -> Bool in
+                return post1.creationDate > post2.creationDate
+            })
+            
+            self.collectionView.reloadData()
+            
+        }
     }
 
 }
