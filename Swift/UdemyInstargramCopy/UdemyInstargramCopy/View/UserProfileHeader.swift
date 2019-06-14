@@ -18,6 +18,7 @@ class UserProfileHeader: UICollectionViewCell {
     var user: User?{
         didSet{
             
+            
             // configure edit profile button
             configureEditProfileFollowButton()
             
@@ -29,6 +30,7 @@ class UserProfileHeader: UICollectionViewCell {
             
             guard let profileImageUrl = user?.profileImageUrl else {return}
             profileImageView.loadImage(with: profileImageUrl)
+            
         }
     }
     

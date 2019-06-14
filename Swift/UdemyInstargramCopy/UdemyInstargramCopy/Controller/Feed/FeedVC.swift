@@ -65,8 +65,7 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         
         guard let post = cell.post else {return}
         
-        let userProfileVC = UserProfileVC(collectionViewLayout: UICollectionViewLayout())
-        
+        let userProfileVC = UserProfileVC(collectionViewLayout: UICollectionViewFlowLayout())
         userProfileVC.user = post.user
         
         navigationController?.pushViewController(userProfileVC, animated: true)

@@ -21,7 +21,7 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Register cell classes
         self.collectionView!.register(UserPostCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.collectionView.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIndentifier)
@@ -77,7 +77,6 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
         header.delegate = self
         
         // set the user in header
-       
         header.user = self.user
         navigationItem.title = user?.username
         
