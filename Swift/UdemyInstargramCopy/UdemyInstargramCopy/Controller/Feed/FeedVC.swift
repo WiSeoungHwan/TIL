@@ -16,6 +16,8 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     // MARK: - Properties
     
     var posts = [Post]()
+    var viewSinglePost = false
+    var post: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,9 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         configureNavBar()
         
         // fetch posts
-        fetchPosts()
+        if !viewSinglePost{
+            fetchPosts()
+        }
     }
 
     // MARK: - UIColectionViewFlowLayout
@@ -49,13 +53,27 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        if viewSinglePost {
+            return 1
+        } else {
+            return posts.count
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        cell.post = posts[indexPath.row]
+        
         cell.delegate = self
+        
+        if viewSinglePost {
+            if let post = self.post {
+                cell.post = post
+            }
+        } else {
+            cell.post = posts[indexPath.row]
+        }
+        
+        
         return cell
     }
     
@@ -89,8 +107,13 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         print("send button tap")
     }
     
+    // MARK: - Configuration
+    
     func configureNavBar(){
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        if !viewSinglePost{
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        }
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "send2"), style: .plain, target: self, action: #selector(handleShowMessages))
         
@@ -132,6 +155,8 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     // MARK: - API
     
     func fetchPosts(){
+        
+        print("Fetch post function called")
         
         POSTS_REF.observe(.childAdded) { (snapshot) in
             
