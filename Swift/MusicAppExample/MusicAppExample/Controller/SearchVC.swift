@@ -8,15 +8,29 @@
 
 import UIKit
 import AVKit
+import FoldingCell
 
 class SearchVC: UITableViewController {
     
+    fileprivate struct C{
+        struct CellHeight {
+            static let close: CGFloat = 75
+            static let open: CGFloat = 456
+        }
+    }
+    
     // MARK: - Properties
+    
+    var cellHeights = [CGFloat]()
     
     private let searchController = UISearchController(searchResultsController: nil)
     
-    var tracks = [Track]()
-    var currentTrack: Track? {
+    private var tracks = [Track]() {
+        didSet{
+            cellHeights = (0..<tracks.count).map{_ in C.CellHeight.close}
+        }
+    }
+    private var currentTrack: Track? {
         didSet {
         
         }
@@ -28,7 +42,9 @@ class SearchVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "iTunes Search"
-        
+        cellHeights = Array(repeating: C.CellHeight.close, count: 10)
+        tableView.estimatedRowHeight = C.CellHeight.close
+        tableView.rowHeight = UITableView.automaticDimension
         // seach controller contigure
         searchControllerConfigure()
         
@@ -36,7 +52,7 @@ class SearchVC: UITableViewController {
         getSearchData(searchTerm: "장범준")
         
         // cell register
-        tableView.register(TrackCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "TestCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.register(CurrentPlayMusicFooterView.self, forHeaderFooterViewReuseIdentifier: "PlayingView")
         
         // tableView separatorInset
@@ -56,35 +72,74 @@ class SearchVC: UITableViewController {
     // MARK: - TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tracks.count
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrackCell
-        if tracks.count > indexPath.row {
-            cell.track = tracks[indexPath.row]
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TestCell
+        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
+        cell.durationsForExpandedState = durations
+        cell.durationsForCollapsedState = durations
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let url = URL(string: tracks[indexPath.row].previewUrl) else {return}
-        guard let footerView = tableView.footerView(forSection: 0) as? CurrentPlayMusicFooterView else {return}
+//        guard let url = URL(string: tracks[indexPath.row].previewUrl) else {return}
+//        guard let footerView = tableView.footerView(forSection: 0) as? CurrentPlayMusicFooterView else {return}
+//
+//        currentTrack = tracks[indexPath.row]
+//        footerView.track = currentTrack
+//        footerView.isPlaying = true
+//
+//        player = AVPlayer(url: url)
+//        player!.play()
         
-        currentTrack = tracks[indexPath.row]
-        footerView.track = currentTrack
-        footerView.isPlaying = true
+        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {return}
         
-        player = AVPlayer(url: url)
-        player!.play()
+        var duration = 0.0
+        let cellIsCollapsed = cellHeights[indexPath.row] == C.CellHeight.close
+        
+        if cellIsCollapsed {
+            cellHeights[indexPath.row] = C.CellHeight.open
+            cell.unfold(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {
+            cellHeights[indexPath.row] = C.CellHeight.close
+            cell.unfold(false, animated: true, completion: nil)
+            duration = 0.8
+        }
+        
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }, completion: nil)
+        
+        if cell.frame.maxY > tableView.frame.maxY {
+            tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+        }
        
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard case let cell as TestCell = cell else {return}
+        
+        if cellHeights[indexPath.row] == C.CellHeight.close {
+            cell.unfold(false, animated: false, completion: nil)
+        }else {
+            cell.unfold(true, animated: false, completion: nil)
+        }
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PlayingView") as! CurrentPlayMusicFooterView
         footerView.delegate = self
         return footerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return cellHeights[indexPath.row]
     }
     
     // MARK: - Networking

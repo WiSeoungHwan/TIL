@@ -1,0 +1,6 @@
+framework module Pods_MusicAppExample {
+  umbrella header "Pods-MusicAppExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
