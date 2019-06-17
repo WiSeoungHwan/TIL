@@ -36,8 +36,8 @@ class CurrentPlayMusicFooterView: UITableViewHeaderFooterView {
     
     // MARK: UI properties
     
-    let albumImageView: CustomImageView = {
-        let imageView = CustomImageView()
+    let albumImageView: UIImageView = {
+        let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 2
         imageView.image = #imageLiteral(resourceName: "defualtMusicImage")

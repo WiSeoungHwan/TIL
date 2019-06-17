@@ -12,3 +12,7 @@ import Foundation
 protocol CurrentPlayMusicFooterViewDelegate {
     func playPauseButtonDidTap(footerView: CurrentPlayMusicFooterView)
 }
+
+protocol TestCellDelegate {
+    func albumImageViewDidTap(cell: TestCell)
+}

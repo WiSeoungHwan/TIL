@@ -16,7 +16,6 @@
 		3CC41BD722AF962A00582335 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BCD22AF962A00582335 /* TrackCell.swift */; };
 		3CC41BD822AF962A00582335 /* CurrentPlayMusicFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BCE22AF962A00582335 /* CurrentPlayMusicFooterView.swift */; };
 		3CC41BD922AF962A00582335 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BD022AF962A00582335 /* Protocol.swift */; };
-		3CC41BDA22AF962A00582335 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BD122AF962A00582335 /* CustomImageView.swift */; };
 		3CC41BDB22AF962A00582335 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BD222AF962A00582335 /* Extention.swift */; };
 		3CC41BDC22AF962A00582335 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BD422AF962A00582335 /* Track.swift */; };
 		3CC41BDD22AF962A00582335 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC41BD622AF962A00582335 /* SearchVC.swift */; };
@@ -35,7 +34,6 @@
 		3CC41BCD22AF962A00582335 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		3CC41BCE22AF962A00582335 /* CurrentPlayMusicFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentPlayMusicFooterView.swift; sourceTree = "<group>"; };
 		3CC41BD022AF962A00582335 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		3CC41BD122AF962A00582335 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		3CC41BD222AF962A00582335 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		3CC41BD422AF962A00582335 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		3CC41BD622AF962A00582335 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				3CC41BD022AF962A00582335 /* Protocol.swift */,
-				3CC41BD122AF962A00582335 /* CustomImageView.swift */,
 				3CC41BD222AF962A00582335 /* Extention.swift */,
 			);
 			path = Util;
@@ -272,7 +269,6 @@
 				3C1C786F22B62A360053C73B /* TestCell.swift in Sources */,
 				3CC41BD922AF962A00582335 /* Protocol.swift in Sources */,
 				3CC41BDB22AF962A00582335 /* Extention.swift in Sources */,
-				3CC41BDA22AF962A00582335 /* CustomImageView.swift in Sources */,
 				3CC41BDC22AF962A00582335 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

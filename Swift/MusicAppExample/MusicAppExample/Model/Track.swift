@@ -18,4 +18,7 @@ struct Track: Decodable{
     let trackName: String
     let artworkUrl100: String
     let previewUrl: String
+    let collectionName: String
+    let releaseDate: String
+    let collectionPrice: Double
 }

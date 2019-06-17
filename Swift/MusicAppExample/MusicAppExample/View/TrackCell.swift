@@ -21,8 +21,8 @@ class TrackCell: UITableViewCell {
         }
     }
     
-    let albumImageView: CustomImageView = {
-        let imageView = CustomImageView()
+    let albumImageView: UIImageView = {
+        let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.image = #imageLiteral(resourceName: "defualtMusicImage")
         return imageView

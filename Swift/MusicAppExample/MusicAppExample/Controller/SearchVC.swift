@@ -14,8 +14,8 @@ class SearchVC: UITableViewController {
     
     fileprivate struct C{
         struct CellHeight {
-            static let close: CGFloat = 75
-            static let open: CGFloat = 456
+            static let close: CGFloat = 83
+            static let open: CGFloat = 350
         }
     }
     
@@ -39,12 +39,15 @@ class SearchVC: UITableViewController {
     var player: AVPlayer?
     var searchWord: String?
     
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "iTunes Search"
         cellHeights = Array(repeating: C.CellHeight.close, count: 10)
         tableView.estimatedRowHeight = C.CellHeight.close
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = UIColor.groupTableViewBackground
         // seach controller contigure
         searchControllerConfigure()
         
@@ -56,7 +59,7 @@ class SearchVC: UITableViewController {
         tableView.register(CurrentPlayMusicFooterView.self, forHeaderFooterViewReuseIdentifier: "PlayingView")
         
         // tableView separatorInset
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 90, bottom: 0, right: 0)
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 500, bottom: 0, right: 0)
     }
     
     // MARK: - Configuration
@@ -77,6 +80,9 @@ class SearchVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TestCell
+        cell.delegate = self
+        cell.track = tracks[indexPath.row]
+        
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
@@ -85,39 +91,17 @@ class SearchVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        guard let url = URL(string: tracks[indexPath.row].previewUrl) else {return}
-//        guard let footerView = tableView.footerView(forSection: 0) as? CurrentPlayMusicFooterView else {return}
-//
-//        currentTrack = tracks[indexPath.row]
-//        footerView.track = currentTrack
-//        footerView.isPlaying = true
-//
-//        player = AVPlayer(url: url)
-//        player!.play()
+        guard let url = URL(string: tracks[indexPath.row].previewUrl) else {return}
+        guard let footerView = tableView.footerView(forSection: 0) as? CurrentPlayMusicFooterView else {return}
+
+        currentTrack = tracks[indexPath.row]
+        footerView.track = currentTrack
+        footerView.isPlaying = true
+
+        player = AVPlayer(url: url)
+        player!.play()
         
-        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {return}
         
-        var duration = 0.0
-        let cellIsCollapsed = cellHeights[indexPath.row] == C.CellHeight.close
-        
-        if cellIsCollapsed {
-            cellHeights[indexPath.row] = C.CellHeight.open
-            cell.unfold(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {
-            cellHeights[indexPath.row] = C.CellHeight.close
-            cell.unfold(false, animated: true, completion: nil)
-            duration = 0.8
-        }
-        
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
-            tableView.beginUpdates()
-            tableView.endUpdates()
-        }, completion: nil)
-        
-        if cell.frame.maxY > tableView.frame.maxY {
-            tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
-        }
        
     }
     
@@ -179,6 +163,8 @@ class SearchVC: UITableViewController {
     
 }
 
+// MARK: - Extension
+
 extension SearchVC: CurrentPlayMusicFooterViewDelegate{
     func playPauseButtonDidTap(footerView: CurrentPlayMusicFooterView) {
         guard let player = self.player else {return}
@@ -189,6 +175,38 @@ extension SearchVC: CurrentPlayMusicFooterViewDelegate{
             player.play()
         }
         footerView.isPlaying.toggle()
+    }
+}
+
+extension SearchVC: TestCellDelegate{
+    func albumImageViewDidTap(cell: TestCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        
+        if cell.isAnimating() {
+            return
+        }
+        
+        var duration = 0.0
+        let cellIsCollapsed = cellHeights[indexPath.row] == C.CellHeight.close
+        if cellIsCollapsed {
+            cellHeights[indexPath.row] = C.CellHeight.open
+            cell.unfold(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {
+            cellHeights[indexPath.row] = C.CellHeight.close
+            cell.unfold(false, animated: true, completion: nil)
+            duration = 0.8
+        }
+        
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+            
+            // fix https://github.com/Ramotion/folding-cell/issues/169
+            if cell.frame.maxY > self.tableView.frame.maxY {
+                self.tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+            }
+        }, completion: nil)
     }
 }
 
