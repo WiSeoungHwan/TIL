@@ -54,7 +54,9 @@ class User {
         
         // add followed users posts to current user-feed
         USER_POSTS_REF.child(uid).observe(.childAdded) { (snapshot) in
+            
             let postId = snapshot.key
+            
             USER_FEED_REF.child(currentUid).updateChildValues([postId: 1])
         }
     }
@@ -72,6 +74,7 @@ class User {
         
         USER_FOLLOWER_REF.child(uid).child(currentUid).removeValue()
         
+        // remove unfollowed users post from current user-feed
         USER_POSTS_REF.child(uid).observe(.childAdded) { (snapshot) in
             let postId = snapshot.key
             USER_FEED_REF.child(currentUid).child(postId).removeValue()

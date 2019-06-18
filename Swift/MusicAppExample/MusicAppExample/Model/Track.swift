@@ -9,7 +9,6 @@
 import Foundation
 
 struct Result: Decodable {
-    let resultCount: Int
     let results: [Track]
 }
 

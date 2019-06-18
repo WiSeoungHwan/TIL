@@ -54,13 +54,14 @@ class TestCell: FoldingCell {
         detailAlbumImageView.layer.cornerRadius = 5
         
         xButton.layer.cornerRadius = 15
-        // shadow
         
+        
+        // shadow
         detailAlbumImageView.layer.shadowColor = UIColor.blue.cgColor
-        detailAlbumImageView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        detailAlbumImageView.layer.shadowOffset = CGSize(width: 10, height: 5)
         detailAlbumImageView.layer.shadowRadius = 10
         detailAlbumImageView.layer.shadowOpacity = 0.4
-        detailAlbumImageView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: detailAlbumImageView.bounds.width + 10, height: detailAlbumImageView.bounds.height)).cgPath
+        detailAlbumImageView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: detailAlbumImageView.bounds.width + 5, height: detailAlbumImageView.bounds.height)).cgPath
         detailAlbumImageView.layer.masksToBounds = false
     }
 

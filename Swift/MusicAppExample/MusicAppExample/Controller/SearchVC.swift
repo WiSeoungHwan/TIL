@@ -75,7 +75,7 @@ class SearchVC: UITableViewController {
     // MARK: - TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tracks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -145,7 +145,6 @@ class SearchVC: UITableViewController {
             } else if let data = data,
                       let response = response as? HTTPURLResponse,
                 response.statusCode == 200{
-                
                 do {
                     let result = try JSONDecoder().decode(Result.self, from: data)
                     self.tracks = result.results
@@ -153,7 +152,7 @@ class SearchVC: UITableViewController {
                         self.tableView.reloadData()
                     }
                 } catch {
-                    print(error.localizedDescription)
+                    print("catch: ", error.localizedDescription)
                 }
                 
             }
