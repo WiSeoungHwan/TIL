@@ -10,6 +10,8 @@ import UIKit
 
 class MenuCell: UICollectionViewCell {
     
+    // MARK: - Properties
+    
     let label: UILabel = {
         let label = UILabel()
         label.text = "Text"
@@ -24,6 +26,7 @@ class MenuCell: UICollectionViewCell {
             label.textColor = isSelected ? .black : .lightGray
         }
     }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -13,6 +13,8 @@
 		3C1C789022B89C130053C73B /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C788F22B89C130053C73B /* CustomTabBarViewController.swift */; };
 		3C1C789322B89D9B0053C73B /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C789222B89D9B0053C73B /* MenuBar.swift */; };
 		3C1C789522B8A3750053C73B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C789422B8A3750053C73B /* MenuCell.swift */; };
+		3C1C789922B938D40053C73B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C789822B938D40053C73B /* Protocol.swift */; };
+		3C1C789B22B93D380053C73B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C789A22B93D380053C73B /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3C1C788F22B89C130053C73B /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		3C1C789222B89D9B0053C73B /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		3C1C789422B8A3750053C73B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		3C1C789822B938D40053C73B /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		3C1C789A22B93D380053C73B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,13 @@
 		3C1C787C22B89B0D0053C73B /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				3C1C789722B938C80053C73B /* Util */,
+				3C1C789622B9349B0053C73B /* Controller */,
 				3C1C789122B89D730053C73B /* View */,
 				3C1C787D22B89B0D0053C73B /* AppDelegate.swift */,
 				3C1C788422B89B0E0053C73B /* Assets.xcassets */,
 				3C1C788622B89B0E0053C73B /* LaunchScreen.storyboard */,
 				3C1C788922B89B0E0053C73B /* Info.plist */,
-				3C1C788F22B89C130053C73B /* CustomTabBarViewController.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -71,8 +76,25 @@
 			children = (
 				3C1C789222B89D9B0053C73B /* MenuBar.swift */,
 				3C1C789422B8A3750053C73B /* MenuCell.swift */,
+				3C1C789A22B93D380053C73B /* MenuView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3C1C789622B9349B0053C73B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C1C788F22B89C130053C73B /* CustomTabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C1C789722B938C80053C73B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3C1C789822B938D40053C73B /* Protocol.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C1C789022B89C130053C73B /* CustomTabBarViewController.swift in Sources */,
+				3C1C789B22B93D380053C73B /* MenuView.swift in Sources */,
 				3C1C787E22B89B0D0053C73B /* AppDelegate.swift in Sources */,
 				3C1C789522B8A3750053C73B /* MenuCell.swift in Sources */,
 				3C1C789322B89D9B0053C73B /* MenuBar.swift in Sources */,
+				3C1C789922B938D40053C73B /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

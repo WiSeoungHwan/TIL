@@ -10,8 +10,9 @@ import UIKit
 
 class MenuBar: UIView {
     
+    // MARK: - Properties
+    
     let menuCollectionView: UICollectionView = {
-        
         // flow layout
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -34,8 +35,11 @@ class MenuBar: UIView {
         return view
     }()
     
-    var menuTitles = ["menu1", "menu2", "menu3", "menu4"]
-
+    var menuTitles = [String]()
+    var indicatorBarLeadingConstraint: NSLayoutConstraint!
+    
+    var delegate: MenuBarDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCollectionView()
@@ -43,6 +47,7 @@ class MenuBar: UIView {
     }
     
     private func configureCollectionView(){
+        
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
         
@@ -57,11 +62,10 @@ class MenuBar: UIView {
         menuCollectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         menuCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         menuCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        menuCollectionView.bottomAnchor.constraint(equalTo: indicatorBar.topAnchor).isActive = true
+        menuCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
-        // 임시
-        
-        indicatorBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        indicatorBarLeadingConstraint = indicatorBar.leadingAnchor.constraint(equalTo: leadingAnchor)
+        indicatorBarLeadingConstraint.isActive = true
         
         indicatorBar.heightAnchor.constraint(equalToConstant: 2).isActive = true
         indicatorBar.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -78,12 +82,12 @@ class MenuBar: UIView {
 
 extension MenuBar: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return menuTitles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MenuCell
-        
+        cell.label.text = menuTitles[indexPath.row]
         return cell
     }
     
@@ -92,7 +96,14 @@ extension MenuBar: UICollectionViewDataSource{
 
 extension MenuBar: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? MenuCell else {return}
+        
+        delegate?.meunBarDidSelected(indexPath)
+        
+        indicatorBarLeadingConstraint.constant = (self.frame.width / CGFloat(menuTitles.count)) * CGFloat((indexPath.item))
+
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.layoutIfNeeded()
+        }, completion: nil)
         
     }
     

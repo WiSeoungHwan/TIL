@@ -15,7 +15,7 @@ class SearchVC: UITableViewController {
     fileprivate struct C{
         struct CellHeight {
             static let close: CGFloat = 83
-            static let open: CGFloat = 350
+            static let open: CGFloat = 330
         }
     }
     
@@ -28,6 +28,7 @@ class SearchVC: UITableViewController {
     private var tracks = [Track]() {
         didSet{
             cellHeights = (0..<tracks.count).map{_ in C.CellHeight.close}
+            print(cellHeights)
         }
     }
     private var currentTrack: Track? {
@@ -44,10 +45,14 @@ class SearchVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "iTunes Search"
+        
+        
         cellHeights = Array(repeating: C.CellHeight.close, count: 10)
         tableView.estimatedRowHeight = C.CellHeight.close
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = UIColor.groupTableViewBackground
+        
+        
         // seach controller contigure
         searchControllerConfigure()
         
@@ -106,6 +111,7 @@ class SearchVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print("a")
         guard case let cell as TestCell = cell else {return}
         
         if cellHeights[indexPath.row] == C.CellHeight.close {
@@ -200,8 +206,6 @@ extension SearchVC: TestCellDelegate{
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
-            
-            // fix https://github.com/Ramotion/folding-cell/issues/169
             if cell.frame.maxY > self.tableView.frame.maxY {
                 self.tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
             }
