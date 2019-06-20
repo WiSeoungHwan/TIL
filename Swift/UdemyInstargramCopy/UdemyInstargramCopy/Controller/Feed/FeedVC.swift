@@ -30,6 +30,11 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         // configure logout btn
         configureNavBar()
         
+        // configure refresh control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+        
         // fetch posts
         if !viewSinglePost{
             fetchPosts()
@@ -104,6 +109,12 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     }
     
     // MARK: - Handlers
+    
+    @objc func handleRefresh(){
+        posts.removeAll(keepingCapacity: false)
+        fetchPosts()
+        collectionView.reloadData()
+    }
     
     @objc func handleShowMessages(){
         print("send button tap")
@@ -199,6 +210,9 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
                 self.posts.sort(by: { (post1, post2) -> Bool in
                     return post1.creationDate > post2.creationDate
                 })
+                
+                // stop refreshing
+                self.collectionView.refreshControl?.endRefreshing()
                 
                 self.collectionView.reloadData()
             })

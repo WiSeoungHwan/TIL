@@ -1,8 +1,8 @@
 //
 //  CustomTabBarViewController.swift
-//  CustomTabBar
+//  CustomTabBarExample
 //
-//  Created by Wi on 18/06/2019.
+//  Created by Wi on 19/06/2019.
 //  Copyright © 2019 Wi. All rights reserved.
 //
 
@@ -14,14 +14,13 @@ class CustomTabBarViewController: UIViewController {
     
     var menuView = MenuView()
     
-    var menuTitles = ["menu1","menu2","menu3", "menu4", "menu5", "menu6"]
-    
+    var menuTitles = ["menu1", "menu2", "menu3", "menu4", "menu5"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "CustomTabBar"
+        
         menuView.menuTitles = menuTitles
         menuView.menuBar.menuCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
-        
         view.addSubview(menuView)
         menuView.translatesAutoresizingMaskIntoConstraints = false
         menuView.menuBar.indicatorBar.widthAnchor.constraint(equalToConstant: self.view.frame.width / CGFloat(menuTitles.count)).isActive = true
@@ -34,6 +33,7 @@ class CustomTabBarViewController: UIViewController {
     }
     
     
+
 }
 
 
