@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Post{
     var caption: String!
@@ -16,6 +17,7 @@ class Post{
     var creationDate: Date!
     var postId: String!
     var user: User?
+    var didLike = false
     
     init(postId: String!, user: User, dictionary: Dictionary<String,AnyObject>) {
         
@@ -41,5 +43,20 @@ class Post{
         if let creationDate = dictionary["creationDate"] as? Double {
             self.creationDate = Date(timeIntervalSince1970: creationDate)
         }
+    }
+    
+    func addjustLikes(addLike: Bool){
+        
+        if addLike{
+            likes = likes + 1
+            didLike = true
+        } else {
+            guard likes > 0 else {return}
+            likes = likes - 1
+            didLike = false
+        }
+        
+        POSTS_REF.child(postId).child("likes").setValue(likes)
+        
     }
 }

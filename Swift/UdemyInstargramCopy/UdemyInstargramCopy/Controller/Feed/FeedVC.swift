@@ -101,7 +101,20 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     }
     
     func handleLikeTapped(for cell: FeedCell) {
-        print("handel l tapped")
+        guard let post = cell.post else {return}
+        
+        if post.didLike{
+            post.addjustLikes(addLike: false)
+            cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
+        } else {
+            post.addjustLikes(addLike: true)
+            cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
+        }
+        
+        guard let likes = post.likes else {return}
+        
+        
+        cell.likesLabel.text = "\() likes"
     }
     
     func handleCommentTapped(for cell: FeedCell) {
@@ -159,10 +172,6 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(alertController, animated: true, completion: nil)
-        
-        
-        
-        
     }
     
     // MARK: - API
