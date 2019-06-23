@@ -14,7 +14,7 @@ private let reuseIdentifier = "Cell"
 class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, FeedCellDelegate{
     
     // MARK: - Properties
-    // dummy
+    // dummy commit 
     
     var posts = [Post]()
     var viewSinglePost = false
