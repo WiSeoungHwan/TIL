@@ -72,3 +72,21 @@ func solution2(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
 
 
 print(solution2(5,[2,4],[1,3,5]))
+
+// MARK: - Third try
+
+func solution3(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
+    var notHaveGimSuitStu = [Int]()
+    for i in 1...n{
+        if !(lost.contains(i) && reserve.contains(i)){
+            
+            if lost.contains(i) && !reserve.contains(i + 1) {
+                notHaveGimSuitStu.append(i)
+            }
+        }
+    }
+    return n - notHaveGimSuitStu.count
+}
+
+
+print(solution3(8,[2,3,7,8],[1,3,5]))

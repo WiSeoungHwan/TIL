@@ -8,25 +8,23 @@
 
 import Foundation
 
-func solution2(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
-    var lostStuCount = lost.count
-    var canRentalStu = reserve
-    for i in 0..<canRentalStu.count {
-        if lostStuCount == 0 {return n - lostStuCount}
-        if lost.contains(reserve[i]){
-            print("같은수: ", canRentalStu[i])
-            canRentalStu.removeFirst()
-            lostStuCount -= 1
-            continue
-        }else if (lost.contains(reserve[i] - 1) || lost.contains(reserve[i] + 1)) && canRentalStu.contains(reserve[i]){
-            print("다른수: ", reserve[i])
-            canRentalStu.removeFirst()
-            lostStuCount -= 1
+func solution3(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
+    var notHaveGimSuitStu = [Int]()
+    for i in 1...n{
+        if !(lost.contains(i) && reserve.contains(i)){
+            if lost.contains(i) && !reserve.contains(i + 1) {
+                if !reserve.contains(i - 1){
+                    notHaveGimSuitStu.append(i)
+                    print(notHaveGimSuitStu)
+                }
+                print(notHaveGimSuitStu, i)
+            }
         }
     }
-    return n - lostStuCount
+    return n - notHaveGimSuitStu.count
 }
 
 
-print(solution2(10,[2,4,7,8,9],[1,3,5]))
+//print(solution2(30,[2,3,25,7,8,11,12,18],[1,24,3,5]))
 
+print(solution3(5, [2,4], [3]))
