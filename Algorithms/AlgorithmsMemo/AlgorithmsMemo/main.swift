@@ -39,6 +39,7 @@ func solution5(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
     return haveGimSuitStu.count
 }
 
+print(solution5(24, [12, 13, 16, 17, 19, 20, 21, 22], [1, 22, 16, 18, 9, 10]))
 
 //print(solution5(30,[2,3,4,25,7,27,28,8,11,12,18],[1,24,26,4,3,5]))
 ////
@@ -46,4 +47,4 @@ func solution5(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
 //
 //print(solution5(10, [2,4,7,8,9], [1,3,5]))
 // 12 13 20  missing
-print(solution5(24, [12, 13, 16, 17, 19, 20, 21, 22], [1, 22, 16, 18, 9, 10]))
+
