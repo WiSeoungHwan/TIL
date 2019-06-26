@@ -8,43 +8,37 @@
 
 import Foundation
 
-func solution5(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
-    var haveGimSuitStu = [Int]()
-    var checkReserve = [Int]()
-    for i in 1...n {
-        if lost.contains(i) && reserve.contains(i){
-            haveGimSuitStu.append(i)
-            checkReserve.append(i)
+func solution1(_ answers: [Int]) -> [Int]{
+    var giveUpMathHumans = [(1,0),(2,0),(3,0)]
+    
+    // 1
+    for i in 1...5{
+        if answers[i - 1] == i {
+            giveUpMathHumans[0].1 += 1
         }
     }
-    for i in 1...n{
-        if checkReserve.contains(i){continue}
-        if !lost.contains(i){
-            haveGimSuitStu.append(i)
-        }else if reserve.contains(i){
-            haveGimSuitStu.append(i)
-        }else if !checkReserve.contains(i + 1) && reserve.contains(i + 1){
-            checkReserve.append(i + 1)
-            haveGimSuitStu.append(i)
-        }else if !checkReserve.contains(i - 1) && reserve.contains(i - 1){
-            checkReserve.append(i - 1)
-            haveGimSuitStu.append(i)
+    // 2
+    var two = (2,1)
+    for (i, v) in answers.enumerated(){
+        if answers[i] % 2 == 0 {
+            if two.0 == v{
+                giveUpMathHumans[1].1 += 1
+                print(v)
+            }
+        }else{
+            if two.1 == v{
+                if two.1 == 5{
+                    two.1 = 0
+                }
+                giveUpMathHumans[1].1 += 1
+                print(v)
+                two.1 += 1
+            }
         }
     }
-    for i in checkReserve{
-        if !haveGimSuitStu.contains(i){
-            haveGimSuitStu.append(i)
-        }
-    }
-    return haveGimSuitStu.count
+    
+    return giveUpMathHumans.map{$0.1}.sorted().reversed()
 }
 
-print(solution5(24, [12, 13, 16, 17, 19, 20, 21, 22], [1, 22, 16, 18, 9, 10]))
-
-//print(solution5(30,[2,3,4,25,7,27,28,8,11,12,18],[1,24,26,4,3,5]))
-////
-//print(solution5(5, [2,4],[3]))
-//
-//print(solution5(10, [2,4,7,8,9], [1,3,5]))
-// 12 13 20  missing
-
+print(solution1([1,2,3,4,5])) // [1]
+print(solution1([1,3,2,4,2])) // [1,2,3]
