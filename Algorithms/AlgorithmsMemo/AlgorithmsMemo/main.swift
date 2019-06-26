@@ -8,34 +8,42 @@
 
 import Foundation
 
-func solution4(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
+func solution5(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
     var haveGimSuitStu = [Int]()
-    for i in 1...n{
+    var checkReserve = [Int]()
+    for i in 1...n {
         if lost.contains(i) && reserve.contains(i){
             haveGimSuitStu.append(i)
-            continue
+            checkReserve.append(i)
         }
-        
+    }
+    for i in 1...n{
+        if checkReserve.contains(i){continue}
         if !lost.contains(i){
             haveGimSuitStu.append(i)
         }else if reserve.contains(i){
             haveGimSuitStu.append(i)
-        }else if !haveGimSuitStu.contains(i) && reserve.contains(i + 1){
+        }else if !checkReserve.contains(i + 1) && reserve.contains(i + 1){
+            checkReserve.append(i + 1)
             haveGimSuitStu.append(i)
-        }else if reserve.contains(i - 1){
+        }else if !checkReserve.contains(i - 1) && reserve.contains(i - 1){
+            checkReserve.append(i - 1)
             haveGimSuitStu.append(i)
         }
-        else {
-            print("else: \(i)")
+    }
+    for i in checkReserve{
+        if !haveGimSuitStu.contains(i){
+            haveGimSuitStu.append(i)
         }
-        print(haveGimSuitStu)
     }
     return haveGimSuitStu.count
 }
 
 
-print(solution4(30,[2,3,25,7,8,11,12,18],[1,24,3,5]))
-
-print(solution4(5, [2,4],[3]))
+//print(solution5(30,[2,3,4,25,7,27,28,8,11,12,18],[1,24,26,4,3,5]))
+////
+//print(solution5(5, [2,4],[3]))
 //
-//print(solution3(8, [2,3,7,8], [1,3,5]))
+//print(solution5(10, [2,4,7,8,9], [1,3,5]))
+// 12 13 20  missing
+print(solution5(24, [12, 13, 16, 17, 19, 20, 21, 22], [1, 22, 16, 18, 9, 10]))
