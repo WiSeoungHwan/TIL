@@ -72,7 +72,7 @@ func solution1(_ answers: [Int]) -> [Int]{
             if i == $0.0{
                 continue
             }else{
-                if v 
+               
             }
         }
     }
