@@ -27,7 +27,6 @@
 
 // MARK: - First try
 
-import Foundation
 
 func solution1(_ n:Int, _ lost:[Int], _ reserve: [Int]) -> Int {
     var rentalCount = 0
