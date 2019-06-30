@@ -23,7 +23,7 @@ func solution1(_ answers: [Int]) -> [Int]{
         if i % 2 == 0 {
             if two.0 == v{
                 giveUpMathHumans[1].1 += 1
-                print("%2 == 0", v)
+//                print("%2 == 0", v)
             }
         }else{
             if two.1 == v{
@@ -67,17 +67,19 @@ func solution1(_ answers: [Int]) -> [Int]{
         }
     }
     var result = [Int]()
-    giveUpMathHumans.forEach{
-        for (i,v) in giveUpMathHumans{
-            if i == $0.0{
-                continue
-            }else{
-               
-            }
-        }
+    let scoreArr = giveUpMathHumans.map{$0.1}
+    if scoreArr[0] > scoreArr[1]{
+        result[0] = giveUpMathHumans[0].0
+    }else if scoreArr[1] = scoreArr[0]{
+        result.append(giveUpMathHumans[1].0)
+    }else{
+        result.
     }
+    
+    
     return result
 }
 
 print(solution1([1,2,3,4,5])) // [1]
 print(solution1([1,3,2,4,2])) // [1,2,3]
+print(solution1([2,3,3,2,3,3,3,1,3,1,3]))
