@@ -139,18 +139,10 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         guard let currentUid = Auth.auth().currentUser?.uid else {return}
         
         if addLike{
-            // updates user-likes structure
-            USER_LIKES_REF.child(currentUid).updateChildValues([postId: 1])
             
-            // updates post-likes structure
-            POST_LIKES_REF.child(postId).updateChildValues([currentUid: 1])
         } else {
             
-            // remove like from user-like structure
-            USER_LIKES_REF.child(currentUid).child(postId).removeValue()
             
-            // remove like from post-like structure
-            POST_LIKES_REF.child(currentUid).child(postId).removeValue()
         }
         
     }
