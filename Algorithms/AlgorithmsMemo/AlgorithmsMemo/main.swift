@@ -66,20 +66,26 @@ func solution1(_ answers: [Int]) -> [Int]{
             }
         }
     }
-    var result = [Int]()
-    let scoreArr = giveUpMathHumans.map{$0.1}
-    if scoreArr[0] > scoreArr[1]{
-        result[0] = giveUpMathHumans[0].0
-    }else if scoreArr[1] = scoreArr[0]{
-        result.append(giveUpMathHumans[1].0)
-    }else{
-        result.
+    var result = [(Int,Int)]()
+    
+    print(giveUpMathHumans)
+    for i in giveUpMathHumans{
+        if result.count == 0 {
+            result.append(i)
+        }else {
+            if result[0].1 < i.1{
+                result = []
+                result.append(i)
+            }else if result[0].1 == i.1{
+                result.append(i)
+            }
+        }
     }
     
-    
-    return result
+    return result.map{$0.0}.sorted()
 }
 
 print(solution1([1,2,3,4,5])) // [1]
 print(solution1([1,3,2,4,2])) // [1,2,3]
 print(solution1([2,3,3,2,3,3,3,1,3,1,3]))
+print(solution1([3,4,3,3,4,1,5,1,5,5]))
