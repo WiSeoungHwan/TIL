@@ -45,7 +45,7 @@ class Post{
         }
     }
     
-    func addjustLikes(addLike: Bool){
+    func addjustLikes(addLike: Bool, completion: @escaping (Int) -> ()){
         guard let currentUid = Auth.auth().currentUser?.uid else {return}
         
         if addLike{
@@ -56,8 +56,9 @@ class Post{
                 POST_LIKES_REF.child(self.postId).updateChildValues([currentUid: 1]) { (err, ref) in
                     self.likes = self.likes + 1
                     self.didLike = true
+                   completion(self.likes)
                     POSTS_REF.child(self.postId).child("likes").setValue(self.likes)
-                    print("succesfully update like structure in database")
+                    print("number of liks is \(self.likes)")
                 }
             }
             
@@ -72,8 +73,9 @@ class Post{
                     guard self.likes > 0 else {return}
                     self.likes = self.likes - 1
                     self.didLike = false
+                    completion(self.likes)
                     POSTS_REF.child(self.postId).child("likes").setValue(self.likes)
-                    print("succesfully remove like structure in database")
+                    print("number of liks is \(self.likes)")
                 }
             }
             
