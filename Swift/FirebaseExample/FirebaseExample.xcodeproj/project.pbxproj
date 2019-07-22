@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C42642D22E2E7BE00DAEDB2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42642C22E2E7BE00DAEDB2 /* Extension.swift */; };
 		3C4EA99B22E2A8AD005C1BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EA99A22E2A8AD005C1BC1 /* AppDelegate.swift */; };
 		3C4EA9A022E2A8AD005C1BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EA99E22E2A8AD005C1BC1 /* Main.storyboard */; };
 		3C4EA9A222E2A8AF005C1BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EA9A122E2A8AF005C1BC1 /* Assets.xcassets */; };
@@ -14,11 +15,14 @@
 		3C4EA9AD22E2AE18005C1BC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EA9AC22E2AE18005C1BC1 /* GoogleService-Info.plist */; };
 		3CC0AB0822E2B01100B2DB32 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0AB0722E2B01100B2DB32 /* EnterViewController.swift */; };
 		3CC0AB0A22E2B02D00B2DB32 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0AB0922E2B02D00B2DB32 /* SearchViewController.swift */; };
+		3CC0AB0F22E2DC6F00B2DB32 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0AB0E22E2DC6F00B2DB32 /* CardTableViewController.swift */; };
+		3CC0AB1122E2DEE500B2DB32 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0AB1022E2DEE500B2DB32 /* CardData.swift */; };
 		C3C0BB2C01DD3CBD09BA0CB9 /* Pods_FirebaseExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE554353AE0E7322EEA5529 /* Pods_FirebaseExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C2FA3DE390590EF511A6F2E /* Pods-FirebaseExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseExample.release.xcconfig"; path = "Target Support Files/Pods-FirebaseExample/Pods-FirebaseExample.release.xcconfig"; sourceTree = "<group>"; };
+		3C42642C22E2E7BE00DAEDB2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3C4EA99722E2A8AD005C1BC1 /* FirebaseExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4EA99A22E2A8AD005C1BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C4EA99F22E2A8AD005C1BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		3C4EA9AC22E2AE18005C1BC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CC0AB0722E2B01100B2DB32 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		3CC0AB0922E2B02D00B2DB32 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3CC0AB0E22E2DC6F00B2DB32 /* CardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
+		3CC0AB1022E2DEE500B2DB32 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		95D04BF7616C469FC451F0E3 /* Pods-FirebaseExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseExample.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseExample/Pods-FirebaseExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9BE554353AE0E7322EEA5529 /* Pods_FirebaseExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,14 +88,17 @@
 		3C4EA99922E2A8AD005C1BC1 /* FirebaseExample */ = {
 			isa = PBXGroup;
 			children = (
+				3CC0AB0722E2B01100B2DB32 /* EnterViewController.swift */,
+				3CC0AB0922E2B02D00B2DB32 /* SearchViewController.swift */,
 				3C4EA99A22E2A8AD005C1BC1 /* AppDelegate.swift */,
 				3C4EA99E22E2A8AD005C1BC1 /* Main.storyboard */,
 				3C4EA9A122E2A8AF005C1BC1 /* Assets.xcassets */,
 				3C4EA9A322E2A8AF005C1BC1 /* LaunchScreen.storyboard */,
 				3C4EA9AC22E2AE18005C1BC1 /* GoogleService-Info.plist */,
 				3C4EA9A622E2A8AF005C1BC1 /* Info.plist */,
-				3CC0AB0722E2B01100B2DB32 /* EnterViewController.swift */,
-				3CC0AB0922E2B02D00B2DB32 /* SearchViewController.swift */,
+				3CC0AB0E22E2DC6F00B2DB32 /* CardTableViewController.swift */,
+				3CC0AB1022E2DEE500B2DB32 /* CardData.swift */,
+				3C42642C22E2E7BE00DAEDB2 /* Extension.swift */,
 			);
 			path = FirebaseExample;
 			sourceTree = "<group>";
@@ -219,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC0AB1122E2DEE500B2DB32 /* CardData.swift in Sources */,
 				3C4EA99B22E2A8AD005C1BC1 /* AppDelegate.swift in Sources */,
+				3CC0AB0F22E2DC6F00B2DB32 /* CardTableViewController.swift in Sources */,
 				3CC0AB0A22E2B02D00B2DB32 /* SearchViewController.swift in Sources */,
+				3C42642D22E2E7BE00DAEDB2 /* Extension.swift in Sources */,
 				3CC0AB0822E2B01100B2DB32 /* EnterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
