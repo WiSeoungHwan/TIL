@@ -8,84 +8,52 @@
 
 import Foundation
 
-func solution1(_ answers: [Int]) -> [Int]{
-    var giveUpMathHumans = [(1,0),(2,0),(3,0)]
-    
-    // 1,2,3,4,5,1,2,3...
-    for i in 1...5{
-        if answers[i - 1] == i {
-            giveUpMathHumans[0].1 += 1
-        }
-    }
-    // 2,1,2,3,2,4,2,5
-    var two = (2,1)
-    for (i, v) in answers.enumerated(){
-        if i % 2 == 0 {
-            if two.0 == v{
-                giveUpMathHumans[1].1 += 1
-//                print("%2 == 0", v)
+func solution(_ land:[[Int]]) -> Int{
+    var answer = 0
+    var beforeTuple = (0,0)
+    var afterTuple = (0,0)
+    // 배열 안의 배열을 꺼내오기
+    for i in land{
+        var arr = i
+        var num = 0
+        beforeTuple = afterTuple
+        for (n,v) in i.enumerated(){
+            if num < v{
+                num = v
+                afterTuple = (n,v)
             }
-        }else{
-            if two.1 == v{
-                if two.1 == 5{
-                    two.1 = 0
+        }
+        
+        if beforeTuple != (0,0) && afterTuple.0 == beforeTuple.0 {
+            var num = 0
+            arr.remove(at: afterTuple.0)
+            print(arr)
+            for (n,v) in arr.enumerated(){
+                if num < v{
+                    num = v
+                    afterTuple = (n,v)
                 }
-                two.1 += 1
-                if two.1 != 2{
-                    giveUpMathHumans[1].1 += 1
-                }
-                
             }
         }
+        
+        answer += afterTuple.1
+        
+        print(beforeTuple,afterTuple)
     }
-    
-    // 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, ...
-    var three = (3,3)
-    for (i,v) in answers.enumerated(){
-        if i % 2 == 0 {
-            if v == three.0{
-                giveUpMathHumans[2].1 += 1
-            }
-            if three.0 == 3 {
-                three.0 = 1
-            }else if three.0 == 5{
-                three.0 = 3
-            }else {
-                three.0 += 1
-            }
-        }else {
-            if v == three.1{
-                giveUpMathHumans[2].1 += 1
-            }
-            if three.1 == 3 {
-                three.1 = 1
-            }else if three.1 == 5{
-                three.1 = 3
-            }else{
-                three.1 += 1
-            }
-        }
-    }
-    var result = [(Int,Int)]()
-    
-    print(giveUpMathHumans)
-    for i in giveUpMathHumans{
-        if result.count == 0 {
-            result.append(i)
-        }else {
-            if result[0].1 < i.1{
-                result = []
-                result.append(i)
-            }else if result[0].1 == i.1{
-                result.append(i)
-            }
-        }
-    }
-    
-    return result.map{$0.0}.sorted()
+    print(answer)
+    return answer
 }
 
-print(solution1([1,2,3,4,5])) // [1]
-print(solution1([1,3,2,4,2])) // [1,2,3]
-print(solution1([2,3,3,2,3,3,3,1,3,1,3]))
-print(solution1([3,4,3,3,4,1,5,1,5,5]))
+//[[7,6,5,4]
+//,[8,5,3,1]
+//,[3,4,5,6]]
+
+
+//[[1,2,3,5]
+//,[5,6,7,8]
+//,[4,3,2,1]]
+
+
+solution([[7,6,5,4],[8,5,3,1],[3,4,5,6]])
+solution([[1,2,3,5],[5,6,7,8],[4,3,2,1]])
+
